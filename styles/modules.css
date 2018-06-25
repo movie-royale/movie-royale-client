@@ -1,0 +1,58 @@
+/*for header*/
+
+#navbar ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-gap: 2em;
+    justify-items: center;
+    margin: 0px auto;
+}
+
+#navbar ul li {
+    display: inline-block;
+    background-color: orange;
+    outline: dotted;
+    width: 100%;
+}
+
+/* for about us page  */
+
+.profile-img {
+    background-image: url("http://via.placeholder.com/100x100");
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+}
+
+.movie-poster {
+    /* background-image:url("http://via.placeholder.com/125x200"); */
+    background-image: url("https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_SY1000_CR0,0,674,1000_AL_.jpg");
+    background-size: cover;
+    width: 125px;
+    height: 200px;
+}
+
+.team-info-movies {
+    perspective: 1000px;
+    margin-left: 50px;
+    /* outline: dotted; */
+}
+
+.team-info-movies ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    /* outline: dotted; */
+}
+
+.team-info-movies ul li img {
+    transition-duration: 0.5s;
+    transform: rotateY(-30deg);
+    transform: rotateX(40deg);
+    /* transform:rotateX(25deg); */
+}
+
+.team-info-movies ul li img:hover {
+    transform: rotate(0);
+    transform: scale(1.5);
+    /* outline: dotted; */
+}
