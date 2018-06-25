@@ -1,24 +1,44 @@
-#home {
-    background-color: bisque;
-}
+ /*
+SCREEN (Grey) - #C5C1C0 - Used for certain panels as well as gutters
+STEEL (Off-Black) - #0A1612 - Used for nav-bar and footer, certain modules
+DENIM (Dark Blue) - #1A2930 - Used for contrasting modules
+MARIGOLD (Gold) - #F7CE3E - Buttons
+MARINE (Light Green) - #57BC90 - Special text/buttons
+WHITE - For bulk of text 
+*/
 
-#user-dashboard {
-    background-color: #9fb8e0;
-}
+ :root {
+     --screen-panel: #C5C1C0;
+     --steel-nav: #0A1612;
+     --denim: #1A2930;
+     --marigold-button: #F7CE3E;
+     --marine: #57BC90;
+ }
 
-#leaderboards {
-    background-color: bisque;
-}
+ #home {
+     background-color: bisque;
+ }
 
-#about-us {
-    background-color: #9fb8e0;
-}
+ #user-dashboard {
+     background-color: #9fb8e0;
+ }
 
+ #leaderboards {
+     background-color: bisque;
+ }
 
-h1{
-    font-size: 3em;
-}
+ #about-us {
+     background-color: #9fb8e0;
+ }
 
-h2{
-    font-size: 2em;
-}
+ h1 {
+     font-size: 3em;
+ }
+
+ h2 {
+     font-size: 2em;
+ }
+
+ a {
+     text-decoration: none;
+ }
