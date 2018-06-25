@@ -5,14 +5,17 @@
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     grid-gap: 2em;
     justify-items: center;
-    margin: 0px auto;
 }
 
 #navbar ul li {
     display: inline-block;
-    background-color: orange;
-    outline: dotted;
+    background-color: var(--marigold-button);
     width: 100%;
+    text-align: center;
+    margin: 0px auto;
+    text-decoration: none;
+
+    /* outline: dotted; */
 }
 
 /* for about us page  */
@@ -22,37 +25,45 @@
     width: 100px;
     height: 100px;
     border: 3px solid black;
+    z-index: inherit;
 }
 
 .movie-poster {
-    /* background-image:url("http://via.placeholder.com/125x200"); */
-    background-image: url("https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_SY1000_CR0,0,674,1000_AL_.jpg");
+    background-image:url("http://via.placeholder.com/125x200");
+    /* background-image: url("https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_SY1000_CR0,0,674,1000_AL_.jpg"); */
     background-size: cover;
-    width: 125px;
+    min-width: 125px;
     height: 200px;
 }
 
-.team-info-movies {
+.team-info {
     perspective: 1000px;
-    margin-left: 50px;
     /* outline: dotted; */
+}
+
+.team-info-movies {
+    /* margin-left: 50px; */
+    
 }
 
 .team-info-movies ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    /* transform: rotateY(30deg); */
     /* outline: dotted; */
 }
 
-.team-info-movies ul li img {
-    transition-duration: 0.5s;
-    transform: rotateY(-30deg);
+.movie-poster{
     transform: rotateX(40deg);
-    /* transform:rotateX(25deg); */
+    transition-duration: 0.5s;
+    z-index: 100;
+
 }
 
-.team-info-movies ul li img:hover {
+
+.movie-poster:hover{
     transform: rotate(0);
-    transform: scale(1.5);
-    /* outline: dotted; */
+    transform: scale(1.8);
+    z-index: 100;
+    
 }
