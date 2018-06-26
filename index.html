@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="styles/base.css" />
     <link rel="stylesheet" type="text/css" href="styles/layout.css" />
     <link rel="stylesheet" type="text/css" href="styles/modules.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
     <title>Movie Royale</title>
 </head>
 
@@ -73,7 +75,7 @@
                     <input type="text" placeholder="Search movies here" id="term" />
                     <button id="search">Find</button>
                 </div>
-                <div id="poster"></div>
+                <div id="poster" class="poster-div"></div>
             </div>
             <!-- testing -->
             <hr>
@@ -211,12 +213,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <!-- INTERNAL SCRIPTS -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/model/user.js"></script>
     <script src="scripts/model/movies.js"></script>
     <script src="scripts/views/movie-view.js"></script>
     <script src="scripts/routing/routes.js"></script>
     <script src="scripts/views/testing.js"></script>
+    <script src="scripts/views/slick.js"></script>
+
+    
 
 </body>
 
