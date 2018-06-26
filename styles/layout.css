@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 
-.header {
+header {
+    color:var(--marigold-button);
     position: sticky;
     background-color: var(--steel-nav);
     z-index: 5;
@@ -10,18 +11,22 @@
     top: 0;
 }
 
+/* .shrink {
+    height: 10vh;
+} */
+
 .container {
     min-height: 100vh;
 }
 
 body {
-    width: 680px;
+    width: 600px;
     margin: 0px auto;
     background-color: white;
 }
 
 footer {
-    color:white;
+    color: white;
     height: 20vh;
     background-color: var(--steel-nav);
 }

@@ -14,32 +14,53 @@
 
 <body>
 
-    <header class="header">
-        <div id="rm-logo"></div>
-        <nav id="navbar">
-            <ul>
-                <li>
-                    <a href="#home">HOME</a>
-                </li>
-                <li>
-                    <a href="#user-dashboard">USER DASHBOARD</a>
-                </li>
-                <li>
-                    <a href="#leaderboards">LEADERBOARDS</a>
-                </li>
-                <li>
-                    <a href="#about-us">ABOUT US</a>
-                </li>
-            </ul>
-        </nav>
-
+    <header>
+        <div class="header">
+            <div id="rm-logo"></div>
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a class="scroll" href="#home">HOME</a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#user-dashboard">USER DASHBOARD</a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#leaderboards">LEADERBOARDS</a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#about-us">ABOUT US</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
     <main>
         <hr>
         <section id="home" class="container">
             <h1>Movie Royale</h1>
             <h2>LANDING PAGE</h2>
+            <hr>
+            <div>
+                <form class="login-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="loginemail">Login ID</label>
+                        <br>
+                        <input type="text" name="login-id" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <br>
+                        <input type="password" name="login-pw" required>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+            </div>
+
             <hr>
         </section>
         <section id="user-dashboard" class="container">
@@ -49,7 +70,7 @@
             <div class="container search">
                 <h1>Movie Poster Search</h1>
                 <div id="fetch">
-                    <input type="text" placeholder="enter movie title here" id="term" />
+                    <input type="text" placeholder="Search movies here" id="term" />
                     <button id="search">Find</button>
                 </div>
                 <div id="poster"></div>
@@ -175,6 +196,10 @@
         <h3>CONTACT US </h3>
         <hr>
         <div id="tmdb-logo">
+        </div>
+        <br>
+        <div>
+            <p>&copy Movie Royale 2018</p>
         </div>
 
 
