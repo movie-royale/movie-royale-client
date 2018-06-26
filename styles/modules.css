@@ -1,21 +1,40 @@
 /*for header*/
 
+.header {
+    position: relative;
+}
+
 #navbar ul {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
     grid-gap: 2em;
+    margin: 0px auto;
     justify-items: center;
 }
 
+a, a:visited, a:active {
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    color: inherit;
+}
+
+/* 
+a, a:visited, a:hover, a:active {
+  } */
+
 #navbar ul li {
     display: inline-block;
-    background-color: var(--marigold-button);
     width: 100%;
+    /* background-color: var(--marine); */
     text-align: center;
-    margin: 0px auto;
     text-decoration: none;
+}
 
-    /* outline: dotted; */
+#navbar ul li a:hover {
+  
+    text-shadow: 0 0 5px #fff,0 0 10px #fff, 0 0 20px #F7CE3E, 0 0 25px #F7CE3E;
 }
 
 /* for about us page  */
@@ -25,45 +44,34 @@
     width: 100px;
     height: 100px;
     border: 3px solid black;
-    z-index: inherit;
 }
 
 .movie-poster {
-    background-image:url("http://via.placeholder.com/125x200");
+    background-image: url("http://via.placeholder.com/125x200");
     /* background-image: url("https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_SY1000_CR0,0,674,1000_AL_.jpg"); */
     background-size: cover;
     min-width: 125px;
     height: 200px;
-}
-
-.team-info {
-    perspective: 1000px;
-    /* outline: dotted; */
-}
-
-.team-info-movies {
-    /* margin-left: 50px; */
-    
+    transition-duration: 500ms;
 }
 
 .team-info-movies ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
-    /* transform: rotateY(30deg); */
-    /* outline: dotted; */
+    text-align: center;
 }
 
-.movie-poster{
-    transform: rotateX(40deg);
-    transition-duration: 0.5s;
-    z-index: 100;
-
-}
-
-
-.movie-poster:hover{
+.movie-poster:hover {
     transform: rotate(0);
-    transform: scale(1.8);
-    z-index: 100;
-    
+    transform: scale(1.5);
 }
+
+@media only screen and (min-width: 680px) {
+    .team-info-movies ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+
+

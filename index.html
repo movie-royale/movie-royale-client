@@ -14,40 +14,68 @@
 
 <body>
 
-    <header class="header sticky-top">
-
-        <nav id="navbar">
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#user-dashboard">USER DASHBOARD</a></li>
-                <li><a href="#leaderboards">LEADERBOARDS</a></li>
-                <li><a href="#about-us">ABOUT US</a></li>
-            </ul>
-        </nav>
+    <header>
+        <div class="header">
+            <div id="rm-logo"></div>
+            <nav id="navbar">
+                <ul>
+                    <li>
+                        <a class="scroll" href="#home">HOME</a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#user-dashboard">USER DASHBOARD</a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#leaderboards">LEADERBOARDS</a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="#about-us">ABOUT US</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
     <main>
         <hr>
         <section id="home" class="container">
             <h1>Movie Royale</h1>
-            <h2>HOME</h2>
+            <h2>LANDING PAGE</h2>
+            <hr>
+            <div>
+                <form class="login-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="loginemail">Login ID</label>
+                        <br>
+                        <input type="text" name="login-id" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <br>
+                        <input type="password" name="login-pw" required>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+            </div>
+
             <hr>
         </section>
         <section id="user-dashboard" class="container">
             <h2>USER DASHBOARD</h2>
             <!-- testing  -->
-            <div class="container">
-                <div class="search">
-                  <h1>Movie Poster Search</h1>
-                  <div id="fetch">
-                    <input type="text" placeholder="enter movie title here" id="term" />
+
+            <div class="container search">
+                <h1>Movie Poster Search</h1>
+                <div id="fetch">
+                    <input type="text" placeholder="Search movies here" id="term" />
                     <button id="search">Find</button>
-                  </div>
-                  <div id="poster">
-                  </div>
                 </div>
-              </div>
-              <!-- testing -->
+                <div id="poster"></div>
+            </div>
+            <!-- testing -->
             <hr>
         </section>
         <section id="leaderboards" class="container">
@@ -166,8 +194,15 @@
     <footer>
 
         <h3>CONTACT US </h3>
+        <hr>
+        <div id="tmdb-logo">
+        </div>
+        <br>
+        <div>
+            <p>&copy Movie Royale 2018</p>
+        </div>
 
-        <img src="https://www.themoviedb.org/static_cache/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png" />
+
 
     </footer>
 

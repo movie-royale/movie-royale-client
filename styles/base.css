@@ -15,20 +15,24 @@ WHITE - For bulk of text
      --marine: #57BC90;
  }
 
+ p {
+     color: white;
+ }
+
  #home {
-     background-color: bisque;
+     background-color: var(--denim);
  }
 
  #user-dashboard {
-     background-color: #9fb8e0;
+     background-color: var(--denim);
  }
 
  #leaderboards {
-     background-color: bisque;
+     background-color: var(--screen-panel);
  }
 
  #about-us {
-     background-color: #9fb8e0;
+     background-color: var(--screen-panel);
  }
 
  h1 {
@@ -41,4 +45,22 @@ WHITE - For bulk of text
 
  a {
      text-decoration: none;
+ }
+
+ main {
+     color: white;
+ }
+
+ #rm-logo {
+     background-image: url("../src/mr-logo.png");
+     width: 12vw;
+     height: 8vw;
+     background-size: cover;
+ }
+
+ #tmdb-logo {
+     background-image: url("https://www.themoviedb.org/static_cache/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png");
+     width: 13vw;
+     height: 5vw;
+     background-size: cover;
  }
