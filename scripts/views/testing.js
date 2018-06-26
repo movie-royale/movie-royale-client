@@ -22,7 +22,10 @@ var getPoster = function () {
             if (json != "Nothing found.") {
                 console.log(json);
                 $('#poster').html(
-                    `<p>Your search found: <strong> ${json.results[0].title}</strong></p><img src=\"http://image.tmdb.org/t/p/w300//${json.results[0].poster_path}"/>`);
+                    `<p>Your search found: <strong> ${json.results[0].title}</strong></p>
+                    <img src=\"http://image.tmdb.org/t/p/w300//${json.results[0].poster_path}"/>
+                    <p>Description: </p>`
+                );
                 // console.log(this);
                 // http://image.tmdb.org/t/p/w500//753JNSDgzCnOGd6qCzO0jEIHM4D.jpg
             } else {
