@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="styles/base.css" />
     <link rel="stylesheet" type="text/css" href="styles/layout.css" />
     <link rel="stylesheet" type="text/css" href="styles/modules.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
     <title>Movie Royale</title>
 
     
@@ -59,9 +61,9 @@
                     </div>
 
                     <div class="form-group">
-                            <label for="email">Email</label>
-                            <br>
-                            <input id="email" type="email" name="email" required>
+                        <label for="email">Email</label>
+                        <br>
+                        <input id="email" type="email" name="email" required>
                     </div>
 
                     <div>
@@ -81,14 +83,55 @@
                     <input type="text" placeholder="Search movies here" id="term" />
                     <button id="search">Find</button>
                 </div>
-                <div id="poster"></div>
                 <div id="search-error"></div>
+                <div id="poster" class="poster-div slider slick-initialized slick-slider"></div>
             </div>
 
             <hr>
         </section>
         <section id="leaderboards" class="container">
             <h2>LEADERBOARDS</h2>
+            <!-- testing -->
+            <section id="features" class="blue">
+                <div class="content">
+                    <h2>Responsive Display</h2>
+                    <div class="testing-div slider">
+
+                        <div class="testing">
+                            <p>poster</p>
+                        </div>
+                        <div class="testing">
+                            <p>poster</p>
+                        </div>
+                        <div class="testing">
+                            <p>poster</p>
+                        </div>
+                        <div class="testing">
+                            <p>poster</p>
+                        </div>
+                        <div class="testing">
+                            <p>poster</p>
+                        </div>
+                        <div class="testing">
+                            <p>poster</p>
+                        </div>
+                        <div class="testing">
+                            <p>poster</p>
+                        </div>
+                        <div class="testing">
+                            <p>poster</p>
+                        </div>
+                        <div class="testing">
+                            <p>poster</p>
+                        </div>
+                        <div class="testing">
+                            <p>poster</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <!-- testing -->
             <hr>
         </section>
         <section id="about-us" class="container">
@@ -219,7 +262,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- INTERNAL SCRIPTS -->
+    <script src="scripts/views/slick.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/model/users.js"></script>
     <script src="scripts/model/movies.js"></script>
@@ -227,6 +272,8 @@
     <script src="scripts/routing/routes.js"></script>
     <script src="scripts/model/api.js"></script>
     <script src="scripts/views/testing.js"></script>
+
+
 
 </body>
 
