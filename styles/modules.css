@@ -75,3 +75,10 @@ a, a:visited, a:hover, a:active {
 
 
 
+/* //testing */
+.testing p{
+    background-image: url("http://via.placeholder.com/200x200");
+    width: 150px;
+    height: 200px;
+    background-size: cover;
+}

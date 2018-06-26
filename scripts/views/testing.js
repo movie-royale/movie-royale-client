@@ -2,12 +2,6 @@
 
 
 // api example
-$('#term').focus(function () {
-    var full = $("#poster").has("img").length ? true : false;
-    if (full == false) {
-        $('#poster').empty();
-    }
-});
 
 var getPoster = function () {
 
@@ -15,31 +9,28 @@ var getPoster = function () {
 
     if (film == '') {
 
-        $('#poster').html('<div class="alert"><strong>Oops!</strong> Try adding something into the search field.</div>');
+        $('#poster').html('<div class="alert">I can\'t search for an empty field, sucka!</div>');
 
     } else {
-
-        $('#poster').html('<div class="alert"><strong>Loading...</strong></div>');
-
-        $.getJSON("https://api.themoviedb.org/3/search/movie?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=" + film + "&callback=?", function (json) {
-            if (json != "Nothing found.") {
+        $('#poster').empty();
+        $.getJSON(`https://api.themoviedb.org/3/search/movie?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=${film}&callback=?`, function (json) {
+            if (json.results.length !== 0) {
                 console.log(json);
-                for (let i in json.results) {
-                    $('#poster').append(
-                        `<div><p>Title:<strong> ${json.results[i].title}</strong></p>
-                    <img src=\"http://image.tmdb.org/t/p/w300//${json.results[i].poster_path}"/></div>`
-                );
-            }
-            // console.log(this);
-            // <p>Description:${json.results[i].overview} </p>
-                // http://image.tmdb.org/t/p/w500//753JNSDgzCnOGd6qCzO0jEIHM4D.jpg
-            } else {
-                $.getJSON("https://api.themoviedb.org/3/search/movie?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=goonies&callback=?", function (json) {
+                // $('.responsive').html(`<div class="responsive">respond</div>`);
+                for (let i = 0; i < 5; i++) {
+                    // $('.responsive').append(
+                    $('.poster-div').append(
 
-                    console.log(json);
-                    $('#poster').html('<div class="alert"><p>We\'re afraid nothing was found for that search.</p></div><p>Perhaps you were looking for The Goonies?</p><img id="thePoster" src="http://image.tmdb.org/t/p/w500/' + json[0].poster_path + ' class="img-responsive" />');
-                });
+                        `<div class="slick-slide slick-cloned"><p>${json.results[i].title}</p>
+                        <img src=\"http://image.tmdb.org/t/p/w300//${json.results[i].poster_path}"/></div>`
+                    );
+                }
             }
+            else {
+                console.log('Search yields no results');
+                $('#poster').empty();
+                $('#search-error').html('<alert>Sorry, we couldn\'t find what you were looking for!</alert>');
+            };
         });
 
     }
@@ -47,7 +38,7 @@ var getPoster = function () {
     return false;
 }
 
-$('#search').click(getPoster);
+$('#search').on('click', getPoster);
 $('#term').keyup(function (event) {
     if (event.keyCode == 13) {
         getPoster();
