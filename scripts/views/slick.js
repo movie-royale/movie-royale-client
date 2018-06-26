@@ -4,25 +4,35 @@
 
 $(document).ready(function () {
     $('.testing-div').slick({
-        slidesToShow: 5,
-        slidesToScroll: 3,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
     });
 
 });
-
 
 
 $(document).ready(function () {
     $('.poster-div').slick({
-        slidesToShow: 5,
-        slidesToScroll: 3,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
     });
 
 });
+
+
+
+
+// $(document).ready(function () {
+//     $('.poster-div').slick({
+//         slidesToShow: 5,
+//         slidesToScroll: 3,
+//         autoplay: true,
+//         autoplaySpeed: 2000,
+//     });
+
+// });
 
 // $(document).ready(function () {
 //     // $('.poster-div').slick({
