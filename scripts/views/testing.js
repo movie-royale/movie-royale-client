@@ -76,11 +76,9 @@ $(document).on("scroll", function () {
 /////smoothing redirect page/////
 $(document).ready(function () {
 
-    let scrollLink = $('.scroll');
-
     // Smooth scrolling
-    scrollLink.click(function (e) {
-        e.preventDefault();
+    $('.scroll').click(function (event) {
+        event.preventDefault();
         $('html').animate({
             scrollTop: $(this.hash).offset().top-200
         }, 1000);
