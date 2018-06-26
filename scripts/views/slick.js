@@ -3,7 +3,19 @@
 
 
 $(document).ready(function () {
-    $('.poster-div ,.testing-div').slick({
+    $('.testing-div').slick({
+        slidesToShow: 5,
+        slidesToScroll: 3,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
+});
+
+
+
+$(document).ready(function () {
+    $('.poster-div').slick({
         slidesToShow: 5,
         slidesToScroll: 3,
         autoplay: true,

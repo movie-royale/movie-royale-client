@@ -16,9 +16,9 @@ var getPoster = function () {
         $.getJSON(`https://api.themoviedb.org/3/search/movie?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=${film}&callback=?`, function (json) {
             if (json.results.length !== 0) {
                 console.log(json);
-                // $('.responsive').html(`<div class="responsive">respond</div>`);
+
                 for (let i = 0; i < 5; i++) {
-                    // $('.responsive').append(
+                
                     $('.poster-div').append(
 
                         `<div class="slick-slide slick-cloned"><p>${json.results[i].title}</p>
