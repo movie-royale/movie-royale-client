@@ -5,62 +5,60 @@
 $(document).ready(function () {
     $('.testing-div').slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToShow: 4,
+        slidesToScroll: 3,
+
     });
 
 });
-
-
-$(document).ready(function () {
-    $('.poster-div').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-    });
-
-});
-
-
-
-
 // $(document).ready(function () {
 //     $('.poster-div').slick({
-//         slidesToShow: 5,
+//         infinite: true,
+//         slidesToShow: 4,
 //         slidesToScroll: 3,
-//         autoplay: true,
-//         autoplaySpeed: 2000,
+
 //     });
 
 // });
 
 // $(document).ready(function () {
-//     // $('.poster-div').slick({
-//         $('.poster-div').slick({
-//         centerMode: true,
-//         centerPadding: '15px',
+//     $('.fk').slick({
+//         infinite: true,
+//         slidesToShow: 4,
+//         slidesToScroll: 3,
+
+//     });
+
+// });
+
+
+// $(document).ready(function () {
+//     $('.add-remove').slick({
 //         slidesToShow: 3,
-//         responsive: [
-//             {
-//                 breakpoint: 768,
-//                 settings: {
-//                     arrows: false,
-//                     centerMode: true,
-//                     centerPadding: '15px',
-//                     slidesToShow: 4
-//                 }
-//             },
-//             {
-//                 breakpoint: 480,
-//                 settings: {
-//                     arrows: false,
-//                     centerMode: true,
-//                     centerPadding: '5px',
-//                     slidesToShow: 5
-//                 }
-//             }
-//         ]
+//         slidesToScroll: 3
+//     });
+//     $('.js-add-slide').on('click', function () {
+//         slideIndex++;
+//         $('.add-remove').slick('slickAdd', '<div><h3>' + slideIndex + '</h3></div>');
+//     });
+
+//     $('.js-remove-slide').on('click', function () {
+//         $('.add-remove').slick('slickRemove', slideIndex - 1);
+//         if (slideIndex !== 0) {
+//             slideIndex--;
+//         }
 //     });
 // });
+function showSlider() {
+    $('#poster').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 3
+    });
+}
+
+
+
+
 
 
