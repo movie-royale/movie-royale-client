@@ -1,22 +1,21 @@
 'use strict'
 
-
+const api_key = "1d51b32090673b3394923b86194480f3";
 // Search TMDB for movies and render results to page
-var getPoster = function () {
-
+function getPoster(e) {
+    // e.preventDefault();
     var film = $('#term').val();
-
     if (film == '') {
 
         $('#poster').html('<div class="alert">I can\'t search for an empty field, sucka!</div>');
 
     } else {
         $('#poster').empty();
-        $.getJSON(`https://api.themoviedb.org/3/search/movie?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=${film}&callback=?`, function (json) {
+        $.getJSON(`https://api.themoviedb.org/3/search/multi?api_key=${api_key}&query=${film}&callback=?`, function (json) {
             if (json.results.length !== 0) {
                 console.log(json);
-
-                for (let i = 0; i < 20; i++) {
+                console.log(json.total_results);
+                for (let i = 0; i < json.results.length; i++) {
                     $('#poster').append(
 
                         `<div class="movie-preview">
@@ -26,14 +25,16 @@ var getPoster = function () {
                         </div>`
                     );
                 }
+
                 showSlider();
+
             }
             else {
                 console.log('Search yields no results');
                 $('#poster').empty();
                 $('#search-error').html('<alert>Sorry, we couldn\'t find what you were looking for!</alert>');
             };
-        });
+        })
 
     };
 
@@ -41,9 +42,15 @@ var getPoster = function () {
     return false;
 };
 
-$('#search').on('click', getPoster);
+$('#search').on('click', function () {
+    fkSlider();
+    getPoster();
+
+    // }
+});
 $('#term').keyup(function (event) {
     if (event.keyCode == 13) {
+        fkSlider();
         getPoster();
     }
 });
