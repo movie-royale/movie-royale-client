@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="styles/modules.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Movie Royale</title>
 
 
@@ -21,29 +23,23 @@
     <header>
         <div class="header">
             <div id="rm-logo"></div>
-            <nav id="navbar">
-                <ul>
-                    <li>
-                        <a class="scroll" href="#home">HOME</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="#user-dashboard">USER DASHBOARD</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="#leaderboards">LEADERBOARDS</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="#about-us">ABOUT US</a>
-                    </li>
-                </ul>
-            </nav>
+            <a id="menu-btn" class="fa fa-bars fa-2x"></a>
+            <a id="menu-close" class="fa fa-window-close fa-2x"></a>
+            <div id="menu-content">
+                <nav>
+                    <a class="scroll" href="#home">HOME</a>
+                    <a class="scroll" href="#user-dashboard">USER DASHBOARD</a>
+                    <a class="scroll" href="#leaderboards">LEADERBOARDS</a>
+                    <a class="scroll" href="#about-us">ABOUT US</a>
+                </nav>
+            </div>
+            <div id="menu-overlay"></div>
         </div>
     </header>
     <main>
         <hr>
         <section id="home" class="container">
             <h1>Movie Royale</h1>
-            <h2>LANDING PAGE</h2>
             <hr>
             <div>
                 <form class="login-form" action="#" method="post">
@@ -96,29 +92,8 @@
             <!-- testing -->
             <section id="features" class="blue">
                 <div class="content">
-                    <h2>Responsive Display</h2>
-                    <div class="testing-div">
 
-                        <div class="testing">
-                            <p>poster1</p>
-                        </div>
-                        <div class="testing">
-                            <p>poster2</p>
-                        </div>
-                        <div class="testing">
-                            <p>poster3</p>
-                        </div>
-                        <div class="testing">
-                            <p>poster4</p>
-                        </div>
-                        <div class="testing">
-                            <p>poster5</p>
-                        </div>
-
-                    </div>
                 </div>
-                </div>
-
             </section>
             <!-- testing -->
             <hr>
@@ -131,15 +106,6 @@
                 <img class="profile-img">
                 <div class="team-info-movies">
                     <ul>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
                         <li>
                             <img class="movie-poster">
                         </li>
@@ -162,15 +128,6 @@
                         <li>
                             <img class="movie-poster">
                         </li>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
                     </ul>
 
                 </div>
@@ -187,15 +144,6 @@
                         <li>
                             <img class="movie-poster">
                         </li>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
                     </ul>
 
                 </div>
@@ -206,15 +154,6 @@
                 <img class="profile-img">
                 <div class="team-info-movies">
                     <ul>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
-                        <li>
-                            <img class="movie-poster">
-                        </li>
                         <li>
                             <img class="movie-poster">
                         </li>
@@ -253,6 +192,7 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- INTERNAL SCRIPTS -->
+    <script src="scripts/animation.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/views/slick.js"></script>
     <script src="scripts/model/users.js"></script>
@@ -260,8 +200,8 @@
     <script src="scripts/views/movie-view.js"></script>
     <script src="scripts/routing/routes.js"></script>
     <script src="scripts/views/testing.js"></script>
+    <script src="scripts/animation.js"></script>
     <script src="scripts/model/api.js"></script>
-
 
 
 </body>
