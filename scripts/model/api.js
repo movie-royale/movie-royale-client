@@ -1,6 +1,19 @@
 'use strict'
 
+
+
+//MORE ABOUT API
 const api_key = "1d51b32090673b3394923b86194480f3";
+
+//get unique id
+// let movie_id =json.results[0].id;
+// console.log(json.results[0].id);
+
+//path to retrieve the individual data
+// let movie_data= `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${api_key}`
+
+
+
 // Search TMDB for movies and render results to page
 function getPoster(e) {
     // e.preventDefault();
@@ -14,8 +27,10 @@ function getPoster(e) {
         $.getJSON(`https://api.themoviedb.org/3/search/multi?api_key=${api_key}&query=${film}&callback=?`, function (json) {
             if (json.results.length !== 0) {
                 console.log(json);
-                console.log(json.total_results);
+                console.log(json.results[0].id);
                 for (let i = 0; i < json.results.length; i++) {
+                    // console.log(json.results[i].id);
+
                     $('#poster').append(
 
                         `<div class="movie-preview">
