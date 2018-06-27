@@ -15,16 +15,16 @@ function showSlider() {
         slidesToScroll: 3,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1260,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
+                    dots: false
                 }
             },
             {
-                breakpoint: 800,
+                breakpoint: 960,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
@@ -70,16 +70,16 @@ $(document).ready(function () {
         slidesToScroll: 3,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1260,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true
+                    dots: false
                 }
             },
             {
-                breakpoint: 800,
+                breakpoint: 960,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2

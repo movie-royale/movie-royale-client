@@ -8,9 +8,6 @@ var app = app || {};
     function Users(usersObj) {
         Object.keys(usersObj).forEach(key => this[key] = usersObj[key]);
     };
-
-
-
     
     // Render Users for leaderboards and search
     Users.prototype.toHtml = function () {
