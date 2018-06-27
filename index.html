@@ -110,37 +110,33 @@
             <!-- testing -->
             <hr>
             <section id="features" class="blue">
-                <div id="movie-detail-popup" >
+                <div id="movie-detail-popup">
                     <div id="movie-detail-poster">
                         <!-- <img src="{{poster_url}}"/> -->
                         <img src="http://via.placeholder.com/400x600" />
                     </div>
                     <div id="movie-detail-info">
                         <h2>{{title}}</h2>
+
+                        <p>Release date:{{release_date}}</p>
+                        <p>Description: {{{description}}}</p>
+                    </div>
+                    <div id="stupid-button">
                         <ul>
-                            <li>Release date:{{release_date}}</li>
                             <li>
-                                Description: {{{description}}}
+                                <button id="add-movie" type="submit">add to list</button>
+                            </li>
+                            <li>
+                                <button>return</button>
                             </li>
                         </ul>
-                        <div id="stupid-button">
-                            <ul>
-                                <li>
-                                    <button id="add-movie" type="submit">add to list</button>
-                                </li>
-                                <li>
-                                    <button>return</button>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
-
                 </div>
                 <div class="content">
                     <h2>Responsive Display</h2>
                     <div class="testing-div">
 
-                
+
 
                     </div>
                 </div>
