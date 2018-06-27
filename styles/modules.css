@@ -1,5 +1,8 @@
 /*for header*/
 
+.slick-slide {
+    outline:none;
+}
 .header {
     position: relative;
 }
@@ -58,6 +61,7 @@ a, a:visited, a:active {
 .movie-preview img {
     min-width: 180px;
     width: 12vw;
+    height:auto;
     margin: 0px auto;
 }
 
@@ -137,6 +141,7 @@ a, a:visited, a:active {
 
 #movie-detail-info {
     grid-area: info;
+    padding:1em;
 }
 
 #stupid-button {
