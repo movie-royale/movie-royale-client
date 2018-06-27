@@ -1,5 +1,6 @@
 h2, p {
 	color: white;
+	margin-top: 15px;
 }
 
 img {
@@ -53,7 +54,6 @@ section .card:hover {
 	display: inline-block;
 	width: 100%;
 	list-style: none;
-	background-color: #57BC90;
 	height: 52px;
 	width: 52px;
 }
