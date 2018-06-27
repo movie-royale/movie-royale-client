@@ -58,12 +58,29 @@ footer {
     background-color: var(--steel-nav);
 }
 
-/* //////media query////// */
+/* //////media query for hamburger menu////// */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 600px) {
 
     body {
         min-width: 80vw;
     }
-
+    #menu-icon {
+        display: none;
+    }
+    nav {
+        text-align: none;
+    }
+    nav ul {
+        display: block;
+        background: none;
+    }
+    nav li {
+        display: inline-block;
+        font-size: 1em;
+        margin-right: 1em;
+    }
+    nav li:hover {
+        background-color: var(--marigold-button);
+    }
 }
