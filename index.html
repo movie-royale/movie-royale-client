@@ -25,7 +25,7 @@
         <div class="header">
             <div id="rm-logo"></div>
             <nav>
-                <div id="icon-menu" class="fa fa-bars fa-2x"></div>
+                <div id="menu-icon" class="fa fa-bars fa-2x"></div>
                 <ul>
                     <li><a class="scroll" href="#home">HOME</a></li>
                     <li><a class="scroll" href="#user-dashboard">USER DASHBOARD</a></li>
@@ -37,11 +37,12 @@
         </div>
     </header>
     <main>
-        <hr>
+        
         <section id="home" class="container">
-            <h1>Movie Royale</h1>
-            <hr>
-            <div>
+            <div id="main-login">
+                <h1>Welcome to Movie Royale</h1>
+                <hr>
+                <h2>Login</h2>
                 <form class="login-form" action="#" method="post">
 
                     <div class="form-group">
@@ -62,13 +63,12 @@
                         <input id="email" type="email" name="email" required>
                     </div>
 
-                    <div>
-                        <input id="login" type="submit" value="login">
+                    <div class="form-group">
+                        <button id="login" type="submit" value="login">LOGIN</button>
                     </div>
                 </form>
             </div>
 
-            <hr>
         </section>
         <section id="user-dashboard" class="container">
             <h1>USER DASHBOARD</h1>

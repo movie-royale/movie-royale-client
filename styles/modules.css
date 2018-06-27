@@ -59,6 +59,44 @@
     transform: scale(1.5);
 }
 
+#main-login {
+    text-align: center;
+    outline: 2px solid white;
+    background-color: var(--steel-nav);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+}
+
+#main-login h1 {
+    color: var(--marigold-button);
+}
+
+#main-login h2 {
+    margin-top: .5em;
+}
+
+.login-form {
+    padding: 1em;
+}
+
+.form-group {
+    margin-top: .5em;
+}
+
+.login-form button {
+    padding: 1em;
+    background-color: var(--screen-panel);
+    font-size: .75em;
+}
+
+.login-form button:hover {
+
+}
+
+
 @media only screen and (max-width: 800px) {
     .movie-preview img {
         min-width: 220px;
