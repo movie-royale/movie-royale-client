@@ -14,14 +14,26 @@
 
     <script id="movie-detail-template" type="text/x-handlebars-template">
         <div id="movie-detail-popup">
-                <h2>{{title}}</h2>
-                <div>
-                    <img src="{{poster-url}}" />
+                <div id="movie-detail-poster">
+                    <!-- <img src="{{poster_url}}"/> -->
+                    <img src="http://via.placeholder.com/400x600" />
                 </div>
-                <div>
+                <div id="movie-detail-info">
+                    <h2>{{title}}</h2>
+
+                    <p>Release date: {{release_date}}</p>
                     <p>Description: {{{description}}}</p>
                 </div>
-            
+                <div id="stupid-button">
+                    <ul>
+                        <li>
+                            <button id="add-movie" type="submit">add to list</button>
+                        </li>
+                        <li>
+                            <button>return</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
      </script>
     <title>Movie Royale</title>
@@ -117,9 +129,12 @@
                     </div>
                     <div id="movie-detail-info">
                         <h2>{{title}}</h2>
-
-                        <p>Release date:{{release_date}}</p>
-                        <p>Description: {{{description}}}</p>
+                        <br>
+                        <p>Release date: {{release_date}}</p>
+                        <br>
+                        <p>Description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis nisi
+                            deleniti exercitationem similique sit natus! Necessitatibus, maxime, blanditiis impedit dicta,
+                            alias tempora placeat veritatis voluptatibus nulla velit tempore ut?</p>
                     </div>
                     <div id="stupid-button">
                         <ul>
