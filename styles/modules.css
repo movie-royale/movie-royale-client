@@ -20,10 +20,6 @@ a, a:visited, a:active {
     color: inherit;
 }
 
-/* 
-a, a:visited, a:hover, a:active {
-  } */
-
 #navbar ul li {
     display: inline-block;
     width: 100%;
@@ -33,8 +29,38 @@ a, a:visited, a:hover, a:active {
 }
 
 #navbar ul li a:hover {
-  
-    text-shadow: 0 0 5px #fff,0 0 10px #fff, 0 0 20px #F7CE3E, 0 0 25px #F7CE3E;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #F7CE3E, 0 0 25px #F7CE3E;
+}
+
+/* for search page and relate */
+
+.movie-preview {
+    /* position: relative; */
+    margin: 20px auto;
+    padding: 1em;
+}
+
+.movie-preview p {
+    /* position: absolute; */
+    text-align: center;
+    font-weight: bold;
+    /* outline: dotted; */
+}
+
+.movie-preview:hover {
+    transform: scale(1.1);
+}
+
+.movie-preview img {
+    min-width: 200px;
+    width: 15vw;
+    margin: 0px auto;
+}
+
+.movie-preview img:hover {
+    outline: groove var(--marigold-button);
+    opacity: 0.7;
+    
 }
 
 /* for about us page  */
@@ -66,17 +92,27 @@ a, a:visited, a:hover, a:active {
     transform: scale(1.5);
 }
 
-@media only screen and (min-width: 680px) {
+@media only screen and (max-width: 800px) {
+    
+    .movie-preview img {
+        min-width: 220px;
+        margin: 0px auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
     .team-info-movies ul {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
     }
+    .movie-preview img {
+        min-width: 300px;
+        margin: 0px auto;
+    }
 }
-
-
-
 /* //testing */
-.testing p{
+
+.testing p {
     background-image: url("http://via.placeholder.com/200x200");
     width: 150px;
     height: 200px;

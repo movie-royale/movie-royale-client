@@ -3,7 +3,7 @@
 }
 
 header {
-    color:var(--marigold-button);
+    color: var(--marigold-button);
     position: sticky;
     background-color: var(--steel-nav);
     z-index: 5;
@@ -20,9 +20,9 @@ header {
 }
 
 body {
-    width: 600px;
+    width: 480px;
     margin: 0px auto;
-    background-color: white;
+    background-color: var(--denim);
 }
 
 footer {
@@ -31,14 +31,13 @@ footer {
     background-color: var(--steel-nav);
 }
 
-/* media query */
+/* //////media query////// */
 
-@media only screen and (min-width: 680px) {
+@media only screen and (min-width: 480px) {
     .header {
-        max-width: 100%;
         position: sticky;
     }
     body {
-        width: 80vw;
+        min-width: 80vw;
     }
 }

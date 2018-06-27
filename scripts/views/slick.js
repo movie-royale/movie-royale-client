@@ -7,11 +7,11 @@
 
 function showSlider() {
     $('#poster').slick({
-        dots: true,
-        infinite: false,
+        dots: false,
+        infinite: true,
         speed: 300,
         rows: 2,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 3,
         responsive: [
             {
@@ -24,7 +24,7 @@ function showSlider() {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 800,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
@@ -47,10 +47,6 @@ function fkSlider() {
     $('#poster').slick('unslick');
 }
 
-//
-// $(function fkSlider() {
-//     $('#poster').slick('unslick');
-// });
 
 
 //slick carousel template
@@ -63,25 +59,14 @@ $(document).ready(function () {
     });
 });
 
-// $(document).ready(function () {
-//     $('#poster').slick({
-//         rows: 3,
-//         infinite: true,
-//         slidesToShow: 4,
-//         slidesToScroll: 100,
-//     });
-// });
-
-
-
 //new toy
 $(document).ready(function () {
     $('#poster').slick({
-        dots: true,
-        infinite: false,
+        dots: false,
+        infinite: true,
         speed: 300,
         rows: 3,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 3,
         responsive: [
             {
@@ -94,7 +79,7 @@ $(document).ready(function () {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 800,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2

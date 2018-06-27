@@ -20,7 +20,7 @@ function getPoster(e) {
 
                         `<div class="movie-preview">
                         <p>${json.results[i].title}</p>
-                        <img src=\"http://image.tmdb.org/t/p/w300//${json.results[i].poster_path}"/>
+                        <img src=\"http://image.tmdb.org/t/p/w500//${json.results[i].poster_path}"/>
                         
                         </div>`
                     );
@@ -41,12 +41,11 @@ function getPoster(e) {
 
     return false;
 };
-
+//unslick then re-apply template everytime it fires a search
 $('#search').on('click', function () {
     fkSlider();
     getPoster();
 
-    // }
 });
 $('#term').keyup(function (event) {
     if (event.keyCode == 13) {
