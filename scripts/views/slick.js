@@ -15,7 +15,7 @@ function showSlider() {
         slidesToScroll: 3,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1260,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
@@ -24,7 +24,7 @@ function showSlider() {
                 }
             },
             {
-                breakpoint: 800,
+                breakpoint: 960,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
@@ -70,7 +70,7 @@ $(document).ready(function () {
         slidesToScroll: 3,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1260,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
@@ -79,7 +79,7 @@ $(document).ready(function () {
                 }
             },
             {
-                breakpoint: 800,
+                breakpoint: 960,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
