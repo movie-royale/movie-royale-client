@@ -9,9 +9,6 @@ var app = app || {};
         Object.keys(usersObj).forEach(key => this[key] = usersObj[key]);
     };
 
-
-
-
     // Render Users for leaderboards and search
     Users.prototype.toHtml = function () {
         let template = Handlebars.compile($('#users-template').text());
@@ -23,12 +20,11 @@ var app = app || {};
         event.preventDefault();
         let formData = {};
         formData.username = $('#username').val(),
-            formData.password = $('#password').val(),
-            formData.email = $('#email').val()
+        formData.password = $('#password').val(),
+        formData.email = $('#email').val()
         let user = new Users(formData);
         console.log(user);
         user.postOne();
-        
     };
 
     // Load instances
@@ -85,6 +81,7 @@ var app = app || {};
             .then(console.log('it works!'))
             .then(results => {
                 Users.loadOne(results);
+                // FIX THIS SHIT
                 callback();
             })
     };
