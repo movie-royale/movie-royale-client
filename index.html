@@ -46,6 +46,7 @@
             <h2>LANDING PAGE</h2>
             <hr>
             <div>
+                <!-- everything in this div handles the login form which is sent to the users database. this form is populated by the user -->
                 <form class="login-form" action="#" method="post">
 
                     <div class="form-group">
@@ -71,6 +72,42 @@
                     </div>
                 </form>
             </div>
+
+            <div>
+                <!-- everything in this div handles the movie data (form) which is sent to the movies database. this form is populated by the API -->
+                <form class="movies-details" action="#" method="post">
+
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <br>
+                        <input id="title" type="text" name="title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="release_date">release_date</label>
+                        <br>
+                        <input id="release_date" type="release_date" name="release_date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">description</label>
+                        <br>
+                        <input id="description" type="description" name="description" required>
+                    </div>
+
+                    <div class="form-group">
+                            <label for="poster_path">poster_path</label>
+                            <br>
+                            <input id="poster_path" type="poster_path" name="poster_path" required>
+                        </div>
+
+                    <div>
+                        <input id="add" type="submit" value="add">
+                    </div>
+                </form>
+            </div>
+
+
 
             <hr>
         </section>
