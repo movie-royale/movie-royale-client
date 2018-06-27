@@ -11,7 +11,7 @@ var app = app || {};
 
 
 
-
+    
     // Render Users for leaderboards and search
     Users.prototype.toHtml = function () {
         let template = Handlebars.compile($('#users-template').text());
@@ -28,7 +28,7 @@ var app = app || {};
         let user = new Users(formData);
         console.log(user);
         user.postOne();
-        
+
     };
 
     // Load instances
