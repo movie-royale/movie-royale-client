@@ -1,17 +1,17 @@
 'use strict';
 
 //header shrink when scroll down
-$(document).on("scroll", function () {
-    if
-    ($(document).scrollTop() > 200) {
-        $("header").addClass("shrink");
-        // $('#navbar').stop().animate({ height: 50 },80);
+// $(document).on("scroll", function () {
+//     if
+//     ($(document).scrollTop() > 200) {
+//         $("header").addClass("shrink");
+//         // $('#navbar').stop().animate({ height: 50 },80);
 
-    }
-    else {
-        $("header").removeClass("shrink");
-    }
-});
+//     }
+//     else {
+//         $("header").removeClass("shrink");
+//     }
+// });
 //testing scrolling 
 
 

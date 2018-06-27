@@ -15,13 +15,18 @@ var getPoster = function () {
         $.getJSON(`https://api.themoviedb.org/3/search/movie?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb&query=${film}&callback=?`, function (json) {
             if (json.results.length !== 0) {
                 console.log(json);
-                for (let i = 0; i < 10; i++) {
+
+                for (let i = 0; i < 20; i++) {
                     $('#poster').append(
 
-                        `<div class="poster-div slick-slide slick-active"><p>${json.results[i].title}</p>
-                        <img src=\"http://image.tmdb.org/t/p/w300//${json.results[i].poster_path}"/></div>`
+                        `<div class="movie-preview">
+                        <p>${json.results[i].title}</p>
+                        <img src=\"http://image.tmdb.org/t/p/w300//${json.results[i].poster_path}"/>
+                        
+                        </div>`
                     );
                 }
+                showSlider();
             }
             else {
                 console.log('Search yields no results');
@@ -31,6 +36,7 @@ var getPoster = function () {
         });
 
     };
+
 
     return false;
 };
