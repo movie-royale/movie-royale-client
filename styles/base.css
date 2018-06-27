@@ -7,6 +7,8 @@ MARINE (Light Green) - #57BC90 - Special text/buttons
 WHITE - For bulk of text 
 */
 
+
+
  :root {
      --screen-panel: #C5C1C0;
      --steel-nav: #0A1612;
@@ -15,8 +17,13 @@ WHITE - For bulk of text
      --marine: #57BC90;
  }
 
- p {
+ h1 {
+    font-family: 'Roboto Slab', serif;
+ }
+
+ h2, h3, label, p, a {
      color: white;
+     font-family: 'Encode Sans Condensed', sans-serif;
  }
 
  #home {

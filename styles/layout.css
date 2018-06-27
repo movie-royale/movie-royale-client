@@ -13,36 +13,29 @@ header {
     max-height: 15vh;
 }
 
-#menu-btn {
+nav {
     position: absolute;
     right: 0;
     top: 0;
-    padding: 1vh;
-}
-
-#menu-close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 1vh;
-}
-
-#menu-content {
-    position: absolute;
-    right: 0;
-    padding: 1em;
-    background-color: var(--screen-panel);
-    margin-top: 1em;
-}
-
-#menu-content a {
-    display: block;
-    margin-top: 1em;
-    color: var(--denim);
-}
-
-#menu-content a:hover {
+    padding: .4em;
     color: var(--marigold-button);
+    text-align: right;
+}
+
+nav ul {
+    display: none;
+    clear: both;
+    background: var(--steel-nav);
+    padding: .5em;
+}
+
+nav:hover ul {
+    display: block;
+}
+
+nav li {
+    color: white;
+    padding: 1em;
 }
 
 /* .shrink {
@@ -68,13 +61,9 @@ footer {
 /* //////media query////// */
 
 @media only screen and (min-width: 480px) {
-    header {
-        
-    }
+
     body {
         min-width: 80vw;
     }
-    .menu-btn {
-        display: none;
-    }
+
 }
