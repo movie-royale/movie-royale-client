@@ -11,10 +11,24 @@
     <link rel="stylesheet" type="text/css" href="styles/modules.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+
+    <script id="movie-detail-template" type="text/x-handlebars-template">
+        <div id="movie-detail-popup">
+                <h2>{{title}}</h2>
+                <div>
+                    <img src="{{poster-url}}" />
+                </div>
+                <div>
+                    <p>Description: {{{description}}}</p>
+                </div>
+            
+            </div>
+     </script>
     <title>Movie Royale</title>
 
 
 </head>
+
 
 <body>
 
@@ -94,26 +108,39 @@
         <section id="leaderboards" class="container">
             <h2>LEADERBOARDS</h2>
             <!-- testing -->
+            <hr>
             <section id="features" class="blue">
+                <div id="movie-detail-popup" >
+                    <div id="movie-detail-poster">
+                        <!-- <img src="{{poster_url}}"/> -->
+                        <img src="http://via.placeholder.com/400x600" />
+                    </div>
+                    <div id="movie-detail-info">
+                        <h2>{{title}}</h2>
+                        <ul>
+                            <li>Release date:{{release_date}}</li>
+                            <li>
+                                Description: {{{description}}}
+                            </li>
+                        </ul>
+                        <div id="stupid-button">
+                            <ul>
+                                <li>
+                                    <button id="add-movie" type="submit">add to list</button>
+                                </li>
+                                <li>
+                                    <button>return</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="content">
                     <h2>Responsive Display</h2>
                     <div class="testing-div">
 
-                        <div class="testing">
-                            <p>poster1</p>
-                        </div>
-                        <div class="testing">
-                            <p>poster2</p>
-                        </div>
-                        <div class="testing">
-                            <p>poster3</p>
-                        </div>
-                        <div class="testing">
-                            <p>poster4</p>
-                        </div>
-                        <div class="testing">
-                            <p>poster5</p>
-                        </div>
+                
 
                     </div>
                 </div>
