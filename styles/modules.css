@@ -28,7 +28,11 @@ a, a:visited, a:active {
     text-decoration: none;
 }
 
-#navbar ul li a:hover {
+#navbar ul li:hover {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #F7CE3E, 0 0 25px #F7CE3E;
+}
+
+#navbar ul li.active {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #F7CE3E, 0 0 25px #F7CE3E;
 }
 
@@ -60,7 +64,6 @@ a, a:visited, a:active {
 .movie-preview img:hover {
     outline: groove var(--marigold-button);
     opacity: 0.7;
-    
 }
 
 /* for about us page  */
@@ -93,7 +96,6 @@ a, a:visited, a:active {
 }
 
 @media only screen and (max-width: 800px) {
-    
     .movie-preview img {
         min-width: 220px;
         margin: 0px auto;
@@ -110,6 +112,7 @@ a, a:visited, a:active {
         margin: 0px auto;
     }
 }
+
 /* //testing */
 
 .testing p {
