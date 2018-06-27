@@ -45,6 +45,3 @@ $(document).ready(function () {
 })
 /////smoothing redirect page end here/////
 
-
-
-
