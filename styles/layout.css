@@ -6,7 +6,7 @@ header {
     color: var(--marigold-button);
     position: sticky;
     background-color: var(--steel-nav);
-    z-index: 5;
+    z-index: 99;
     box-shadow: 0px 3px 2px #443;
     top: 0;
     padding: 10px;
