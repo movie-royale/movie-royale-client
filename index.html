@@ -14,6 +14,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Roboto+Slab" rel="stylesheet">
 
+    <script id="movies-template" type="text/x-handlebars-template">
+
+        <!-- $('#title').val -->
+        <!-- $('#release_date').val -->
+            <!-- $('#description').val -->
+            <!-- $('#poster_path').val -->
+
+        <div id="movie-detail-popup">
+            <div id="movie-detail-poster">
+                <!-- <img src="{{poster_path}}"/> -->
+                <img src="http://via.placeholder.com/400x600" />
+            </div>
+            <div id="movie-detail-info">
+                <h2>{{title}}</h2>
+                <br>
+                <p>Release date: {{release_date}}</p>
+                <br>
+                <p>Description: {{{over_view}}}_</p>  
+            </div>
+            <div id="stupid-button">
+
+                <button id="add-movie" type="submit">Add to your collection</button>
+
+            </div>
+        </div>
+
+
+    </script>
+
     <title>Movie Royale</title>
 
         
@@ -28,40 +57,84 @@
             <nav>
                 <div id="menu-icon" class="fa fa-bars fa-2x"></div>
                 <ul>
+
                     <li><a class="scroll" href="/">HOME</a></li>
                     <li><a class="scroll" href="/dashboard">USER DASHBOARD</a></li>
                     <li><a class="scroll" href="/leaderboards">LEADERBOARDS</a></li>
                     <li><a class="scroll" href="/about-us">ABOUT US</a></li>
+
                 </ul>
             </nav>
-            
+
         </div>
     </header>
     <main>
-        
-    <section id="home" class="container">
-        <div id="main-login">
-            <h1>Welcome to Movie Royale</h1>
-            <h2>Login</h2>
-            <form class="login-form" action="#" method="post">
+        <section id="home" class="container">
+            <div id="main-login">
+                <h1>Welcome to Movie Royale</h1>
+                <h2>Login</h2>
+                <form class="login-form" action="#" method="post">
 
-                <div class="form-group">
-                    <label for="username">Login ID</label>
-                    <br>
-                    <input id="username" type="text" name="username" required>
+                    <div class="form-group">
+                        <label for="username">Login ID</label>
+                        <br>
+                        <input id="username" type="text" name="username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <br>
+                        <input id="password" type="password" name="password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <br>
+                        <input id="email" type="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <button id="login" type="submit" value="login">LOGIN</button>
+                    </div>
+                </form>
+            </div>
+
+            <hr>
+        </section>
+        <section id="leaderboards" class="container">
+            <h2>LEADERBOARDS</h2>
+            <!-- testing -->
+            <section id="features" class="blue">
+
+                <div id="movie-detail-popup">
+                    <div id="movie-detail-poster">
+                        <!-- <img src="{{poster_url}}"/> -->
+                        <img src="http://via.placeholder.com/400x600" />
+                    </div>
+                    <div id="movie-detail-info">
+                        <h2>{{title}}</h2>
+                        <input id="title" type="text" readonly>
+                        <input id="release_date" type="text" readonly>
+                        <input id="description" type="text" readonly>
+                        <input id="poster_path" type="text" readonly>
+
+                        <br>
+                        <p>Release date: {{release_date}}</p>
+                        <br>
+                        <p>Description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis nisi
+                            deleniti exercitationem similique sit natus! Necessitatibus, maxime, blanditiis impedit dicta,
+                            alias tempora placeat veritatis voluptatibus nulla velit tempore ut?Lorem ipsum dolor, sit amet
+                            consectetur adipisicing elit. Vitae ea dignissimos laboriosam totam, ex, provident natus veniam
+                            molestiae error, hic consectetur in quibusdam cumque delectus cum quia accusantium enim quod?</p>
+                    </div>
+                    <div id="stupid-button">
+
+                        <button id="add" type="submit">Add to your collection</button>
+
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <br>
-                    <input id="password" type="password" name="password" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <br>
-                    <input id="email" type="email" name="email" required>
-                </div>
+            </section>
 
                 <div class="form-group">
                     <button id="login" type="submit" value="login">LOGIN</button>
@@ -125,6 +198,7 @@
 
             </div>
         </section>
+
             <!-- testing -->
             <hr>
         </section>
