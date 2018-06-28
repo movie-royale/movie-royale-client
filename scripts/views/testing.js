@@ -22,26 +22,38 @@
 //     scrollLink.click(function (event) {
 //         event.preventDefault();
 //         $('html').animate({
-//             scrollTop: $(this.hash).offset().top - 100
+//             scrollTop: $(this).attr('href').offset().top - 100
 //         }, 1000);
 //     });
 
-//     // Active link switching
-//     $(window).scroll(function () {
-//         let scrollbarLocation = $(this).scrollTop();
+    // Active link switching
+    // $(window).scroll(function () {
+    //     let scrollbarLocation = $(this).scrollTop();
 
-//         scrollLink.each(function () {
+    //     scrollLink.each(function () {
 
-//             let sectionOffset = $(this.hash).offset().top -400;
+    //         let sectionOffset = $(this).attr('href').offset().top -100;
 
-//             if (sectionOffset <= scrollbarLocation) {
-//                 $(this).parent().addClass('active');
-//                 $(this).parent().siblings().removeClass('active');
-//             }
-//         })
+    //         if (sectionOffset <= scrollbarLocation) {
+    //             $(this).parent().addClass('active');
+    //             $(this).parent().siblings().removeClass('active');
+    //         }
+    //     })
 
-//     })
+    // })
 
 // })
 /////smoothing redirect page end here/////
 
+// $(function() { 
+//     $('#active-menu').on('click','li', function ( e ) {
+//         e.preventDefault();
+//         // $(this).parents('#active-menu').find('li').addClass('active');
+//         $(this).parents('#active-menu').find('li').addClass('active');
+//         console.log(this);
+        // $(activeTab).show();
+
+//     });
+// });
+
+$('#movie-detail-popup').hide();

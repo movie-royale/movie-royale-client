@@ -7,7 +7,7 @@
 
 function showSlider() {
     $('#poster').slick({
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 300,
         rows: 2,
@@ -18,7 +18,7 @@ function showSlider() {
                 breakpoint: 1260,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 2,
                     infinite: true,
                     dots: true
                 }
@@ -27,14 +27,20 @@ function showSlider() {
                 breakpoint: 960,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
                 }
             },
             {
                 breakpoint: 480,
+                rows: 1,
                 settings: {
+                    rows: 1,
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
                 }
             }
         ]
@@ -62,10 +68,10 @@ $(document).ready(function () {
 //new toy
 $(document).ready(function () {
     $('#poster').slick({
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 300,
-        rows: 3,
+        rows: 2,
         slidesToShow: 4,
         slidesToScroll: 3,
         responsive: [
@@ -73,7 +79,7 @@ $(document).ready(function () {
                 breakpoint: 1260,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 2,
                     infinite: true,
                     dots: true
                 }
@@ -82,14 +88,19 @@ $(document).ready(function () {
                 breakpoint: 960,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
+                    rows: 1,
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
                 }
             }
         ]

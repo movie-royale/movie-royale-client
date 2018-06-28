@@ -35,7 +35,7 @@ WHITE - For bulk of text
  }
 
  #leaderboards {
-     background-color: var(--screen-panel);
+     background-color: var(--denim);
  }
 
  #about-us {
@@ -60,7 +60,7 @@ WHITE - For bulk of text
 
  #rm-logo {
      background-image: url("../src/mr-logo.png");
-     width: 10vw;
+     width: 8vw;
      height: 5vw;
      background-size: cover;
      padding: .3em 0em .3em .5em;

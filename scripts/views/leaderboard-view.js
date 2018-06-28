@@ -12,7 +12,7 @@ function resetter() {
 
 leaderboardView.initLeaderboardView = function() {
     resetter();
-    $('#leaderboards').show();
+    $('#leaderboards').show(500);
     
 };
 

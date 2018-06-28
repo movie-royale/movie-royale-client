@@ -31,13 +31,29 @@ function getPoster(e) {
 
                 app.mostRecentResults = json;
 
+
+
                 for (let i = 0; i < json.results.length; i++) {
                     // console.log(json.results[i].id);
+                    if (app.mostRecentResults.results[i].name) {
+                        var title = app.mostRecentResults.results[i].name;
+                        console.log(title + " name")
+                    } else if (app.mostRecentResults.results[i].original_title) {
+                        var title = app.mostRecentResults.results[i].original_title;
+                        console.log(title + " original_title")
+                    } else if (app.mostRecentResults.results[i].original_name) {
+                        var title = app.mostRecentResults.results[i].original_name;
+                        console.log(title + " original_name")
 
+                    } else if (app.mostRecentResults.results[i].originatitlel_name) {
+                        var title = app.mostRecentResults.results[i].title;
+                        console.log(title + " title")
+
+                    }
                     $('#poster').append(
 
                         `<div class="movie-preview">
-                        <p>${json.results[i].name}</p>
+                        <p>${title}</p>
                         <img src=\"http://image.tmdb.org/t/p/w500//${json.results[i].poster_path}" id="${json.results[i].id}"/>
                         
                         </div>`
@@ -78,7 +94,7 @@ $('#poster').on('click', 'img', function () {
     console.log(this.id, ' was click')
     console.log(app.mostRecentResults.results[0].id, ' sample')
 
-    
+
     for (let i in app.mostRecentResults.results) {
         if (parseInt(this.id) === app.mostRecentResults.results[i].id) {
             if (app.mostRecentResults.results[i].first_air_date) {
@@ -108,14 +124,20 @@ $('#poster').on('click', 'img', function () {
             }
 
 
+
             console.log(title, ' was clicked WOOOOOOT');
-            $('#title').val(title)
-            $('#release_date').val(date)
-            $('#description').val(app.mostRecentResults.results[i].overview)
-            $('#poster_path').val(app.mostRecentResults.results[i].poster_path)
+            $('#title').empty().append(title)
+            $('#release-date').empty().append(`Release date: ${date}`)
+            $('#description').empty().append(app.mostRecentResults.results[i].overview)
+            $('#poster-path').empty().attr("src", `http://image.tmdb.org/t/p/w500/${app.mostRecentResults.results[i].poster_path}`)
+
         }
     }
     // console.log(app.mostRecentResults)
-
+    $('#movie-detail-popup').show(200);
 
 });
+
+$('#close-detail').on('click',function(){
+    $('#movie-detail-popup').hide();
+})
