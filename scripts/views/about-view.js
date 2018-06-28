@@ -6,12 +6,8 @@ var app = app || {};
 
 let aboutView = {};
 
-function resetter() {
-    $('.container').hide();
-};
-
 aboutView.initAboutView = function() {
-    resetter();
+    $('.container').hide();
     $('#about-us').show();
     
 };

@@ -6,12 +6,9 @@ var app = app || {};
 
 let leaderboardView = {};
 
-function resetter() {
-    $('.container').hide();
-};
 
 leaderboardView.initLeaderboardView = function() {
-    resetter();
+    $('.container').hide();
     $('#leaderboards').show();
     
 };

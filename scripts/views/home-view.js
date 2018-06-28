@@ -6,24 +6,24 @@ var app = app || {};
 
 var homeView = {};
 
-// reset the page
-function resetter() {
-    $('.container').hide();
-};
-
 // initialize standard login
 homeView.initLoginView = function() {
-    resetter();
+    $('.container').hide();
     $('#dashboard-button').hide();
     $('#home').show();
 
-    
     // routes to user dashboard on form submit
     $('#login').on('click', function(e) {
         e.preventDefault();
         app.Users.fetchAll();
-        let userId = app.Users.all[0].users_id;
-        console.log(app.Users.all[0].users_id);
+        for (let i = 0; i < app.Users.all.length; i++) {
+            if ($('#username').val() == app.Users.all[i].username) {
+                let userId = this.users_id;
+                console.log(userId)
+                // return userId;
+            }
+        }
+        // console.log(this.userId);
         // page(`/dashboard/${userId}`);
     })
 };

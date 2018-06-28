@@ -6,16 +6,13 @@ var app = app || {};
 
 let userView = {};
 
-function resetter() {
-    $('.container').hide();
-};
-
 userView.initUserDashboard = function() {
-    resetter();
+    $('.container').hide();
     $('#dashboard-button').show();
     $('#user-dashboard').show();
-    
 };
+
+userView.setUserData = function() {}
 
 module.userView = userView;
 
