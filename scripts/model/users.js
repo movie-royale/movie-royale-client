@@ -40,15 +40,15 @@ var app = app || {};
     };
 
     // AJAX fetch and load
-    Users.fetchAll = callback => {
+    Users.fetchAll = () => {
         $.get(`${app.ENV.apiURL}/api/v1/users`)
             .then(results => {
                 Users.loadAll(results);
-                callback();
+                // callback();
             })
     };
 
-    Users.fetchOne = (id, callback) => {
+    Users.fetchOne = (id) => {
         $.ajax({
             url: `${app.ENV.apiURL}/api/v1/users/${id}`,
             method: 'GET',
@@ -58,7 +58,6 @@ var app = app || {};
         })
             .then(results => {
                 Users.loadOne(results);
-                callback();
             })
     };
 
