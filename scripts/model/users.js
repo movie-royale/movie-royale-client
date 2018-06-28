@@ -31,8 +31,8 @@ var app = app || {};
     Users.one = [];
 
     // AJAX fetch and load
-    Users.loadAll = rows => {
-        Users.all = rows.map((user) => new Users(user));
+    Users.loadAll = results => {
+        Users.all = results.map((user) => new Users(user));
     };
 
     Users.loadOne = rows => {
@@ -48,12 +48,12 @@ var app = app || {};
             })
     };
 
-    Users.fetchOne = (id) => {
+    Users.fetchOne = (ctx) => {
         $.ajax({
-            url: `${app.ENV.apiURL}/api/v1/users/${id}`,
+            url: `${app.ENV.apiURL}/api/v1/users/${ctx.params.users_id}`,
             method: 'GET',
             data: {
-                users_id: id
+                users_id: ctx.params.users_id
             }
         })
             .then(results => {

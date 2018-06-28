@@ -21,7 +21,7 @@ homeView.initLoginView = function() {
         for (let i = 0; i < app.Users.all.length; i++) {
             console.log('in the for loop');
             if ($('#username').val() == app.Users.all[i].username) {
-                console.log(userId, 'userId inside the for loop')
+                console.log('userId inside the for loop')
                 app.Users.fetchAll();
                 var userId = app.Users.all[i].users_id;
             } 
@@ -33,10 +33,6 @@ homeView.initLoginView = function() {
         page(`/dashboard/${userId}`);
     })
 };
-
-homeView.setFavorites = function() {
-    
-}
 
 module.homeView = homeView;
 
