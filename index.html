@@ -16,7 +16,7 @@
 
     <title>Movie Royale</title>
 
-    
+        
 
 </head>
 
@@ -28,10 +28,10 @@
             <nav>
                 <div id="menu-icon" class="fa fa-bars fa-2x"></div>
                 <ul>
-                    <li><a class="scroll" href="#home">HOME</a></li>
-                    <li><a class="scroll" href="#user-dashboard">USER DASHBOARD</a></li>
-                    <li><a class="scroll" href="#leaderboards">LEADERBOARDS</a></li>
-                    <li><a class="scroll" href="#about-us">ABOUT US</a></li>
+                    <li><a class="scroll" href="/">HOME</a></li>
+                    <li><a class="scroll" href="/dashboard">USER DASHBOARD</a></li>
+                    <li><a class="scroll" href="/leaderboards">LEADERBOARDS</a></li>
+                    <li><a class="scroll" href="/about-us">ABOUT US</a></li>
                 </ul>
             </nav>
             
@@ -75,7 +75,7 @@
 
         <section id="user-info"></section>
 
-        <div class="container search">
+        <div class="search">
             <h2>Movie Search</h2>
             <div id="fetch">
                 <input type="text" placeholder="Search movies here" id="term" />
@@ -106,7 +106,8 @@
                     <br>
                     <p>Description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis nisi
                         deleniti exercitationem similique sit natus! Necessitatibus, maxime, blanditiis impedit dicta,
-                        alias tempora placeat veritatis voluptatibus nulla velit tempore ut?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae ea dignissimos laboriosam totam, ex, provident natus veniam molestiae error, hic consectetur in quibusdam cumque delectus cum quia accusantium enim quod?</p>
+                        alias tempora placeat veritatis voluptatibus nulla velit tempore ut?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae ea dignissimos laboriosam totam, ex, provident natus veniam molestiae error, hic consectetur in quibusdam cumque delectus cum quia accusantium enim quod?
+                    </p>
                 </div>
                 <div id="stupid-button">
                     <ul>
@@ -225,9 +226,13 @@
     <script src="scripts/views/slick.js"></script>
     <script src="scripts/model/users.js"></script>
     <script src="scripts/model/movies.js"></script>
-    <script src="scripts/controller/routes.js"></script>
+    <script src="scripts/views/home-view.js"></script>
+    <script src="scripts/views/user-view.js"></script>
+    <script src="scripts/views/leaderboard-view.js"></script>
+    <script src="scripts/views/about-view.js"></script>
     <script src="scripts/views/testing.js"></script>
     <script src="scripts/model/api.js"></script>
+    <script src="scripts/controller/routes.js"></script>
 
 
 </body>

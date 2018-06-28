@@ -4,6 +4,8 @@ var app = app || {};
 
 (function(module) {
 
+let userView = {};
+
 function resetter() {
     $('.container').hide();
 };
@@ -11,6 +13,7 @@ function resetter() {
 userView.initUserDashboard = function() {
     resetter();
     $('#user-dashboard').show();
+    
 };
 
 module.userView = userView;

@@ -12,7 +12,7 @@ function resetter() {
 };
 
 // initialize standard login
-homeView.initLoginPage = function() {
+homeView.initLoginView = function() {
     resetter();
     $('#home').show();
 
