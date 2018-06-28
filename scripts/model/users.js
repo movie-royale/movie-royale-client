@@ -8,7 +8,6 @@ var app = app || {};
     function Users(usersObj) {
         Object.keys(usersObj).forEach(key => this[key] = usersObj[key]);
     };
-    
     // Render Users for leaderboards and search
     Users.prototype.toHtml = function () {
         let template = Handlebars.compile($('#users-template').text());
@@ -20,38 +19,52 @@ var app = app || {};
         event.preventDefault();
         let formData = {};
         formData.username = $('#username').val(),
-            formData.password = $('#password').val(),
-            formData.email = $('#email').val()
+        formData.password = $('#password').val(),
+        formData.email = $('#email').val()
         let user = new Users(formData);
         console.log(user);
         user.postOne();
-
     };
 
     // Load instances
     Users.all = [];
+    Users.one = [];
 
     // AJAX fetch and load
-    Users.loadAll = rows => {
-        Users.all = rows.map((user) => new Users(user));
+    Users.loadAll = results => {
+        Users.all = results.map((user) => new Users(user));
+    };
+
+    Users.loadOne = rows => {
+        Users.one = rows.map((user) => new Users(user));
     };
 
     // AJAX fetch and load
-    Users.fetchAll = callback => {
+    Users.fetchAll = () => {
         $.get(`${app.ENV.apiURL}/api/v1/users`)
             .then(results => {
                 Users.loadAll(results);
-                callback();
+                // callback();
             })
     };
 
-    Users.fetchOne = (id, callback) => {
+    Users.fetchOne = (ctx) => {
         $.ajax({
-            url: `${app.ENV.apiURL}/api/v1/users/${id}`,
+            url: `${app.ENV.apiURL}/api/v1/users/${ctx.params.users_id}`,
             method: 'GET',
             data: {
-                users_id: 1, // need to pass a variable in here to select specific users id
+                users_id: ctx.params.users_id
             }
+        })
+            .then(results => {
+                Users.loadOne(results);
+            })
+    };
+
+    Users.deleteOne = (id, callback) => {
+        $.ajax({
+            url: `${app.ENV.apiURL}/api/v1/users/${id}`,
+            method: 'DELETE'
         })
             .then(results => {
                 Users.loadAll(results);
@@ -59,13 +72,10 @@ var app = app || {};
             })
     };
 
-    Users.deleteOne = (id, callback) => {
+    Users.truncateTable = (callback) => {
         $.ajax({
-            url: `${app.ENV.apiURL}/api/v1/users/${id}`,
-            method: 'DELETE',
-            data: {
-                users_id: 1, // need to pass a variable in here to select specific users id
-            }
+            url: `${app.ENV.apiURL}/api/v1/users`,
+            method: 'DELETE'
         })
             .then(results => {
                 Users.loadAll(results);
@@ -81,7 +91,8 @@ var app = app || {};
         })
             .then(console.log('it works!'))
             .then(results => {
-                Users.loadOne(results);
+                Users.loadAll(results);
+                // FIX THIS SHIT
                 callback();
             })
     };

@@ -6,7 +6,7 @@ header {
     color: var(--marigold-button);
     position: sticky;
     background-color: var(--steel-nav);
-    z-index: 5;
+    z-index: 99;
     box-shadow: 0px 3px 2px #443;
     top: 0;
     padding: 10px;
@@ -47,7 +47,7 @@ nav li:active {
 } */
 
 .container {
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 body {
@@ -58,7 +58,7 @@ body {
 
 footer {
     color: white;
-    height: 20vh;
+    height: 12vh;
     background-color: var(--steel-nav);
 }
 
@@ -83,7 +83,10 @@ footer {
         font-size: 1em;
         margin-right: 1em;
     }
-    nav li:hover {
+    nav li:active {
+        background-color: var(--marigold-button);
+    }
+    nav li:active {
         background-color: var(--marigold-button);
     }
 }
