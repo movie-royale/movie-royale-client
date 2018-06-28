@@ -7,9 +7,10 @@ var app = app || {};
 let aboutView = {};
 
 aboutView.initAboutView = function() {
+
     $('.container').hide();
     $('#about-us').show();
-    
+
 };
 
 module.aboutView = aboutView;

@@ -8,9 +8,10 @@ let leaderboardView = {};
 
 
 leaderboardView.initLeaderboardView = function() {
+
     $('.container').hide();
     $('#leaderboards').show();
-    
+  
 };
 
 module.leaderboardView = leaderboardView;

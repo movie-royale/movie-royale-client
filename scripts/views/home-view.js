@@ -8,6 +8,7 @@ var homeView = {};
 
 // initialize standard login
 homeView.initLoginView = function() {
+
     $('.container').hide();
     $('#dashboard-button').hide();
     $('#home').show();

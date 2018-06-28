@@ -47,7 +47,7 @@ nav li:active {
 } */
 
 .container {
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 body {
@@ -58,12 +58,11 @@ body {
 
 footer {
     color: white;
-    height: 20vh;
+    height: 12vh;
     background-color: var(--steel-nav);
 }
 
 /* //////media query for hamburger menu////// */
-
 
 @media only screen and (min-width: 600px) {
     body {
@@ -83,6 +82,9 @@ footer {
         display: inline-block;
         font-size: 1em;
         margin-right: 1em;
+    }
+    nav li:active {
+        background-color: var(--marigold-button);
     }
     nav li:active {
         background-color: var(--marigold-button);

@@ -7,9 +7,11 @@ var app = app || {};
 let userView = {};
 
 userView.initUserDashboard = function() {
+
     $('.container').hide();
     $('#dashboard-button').show();
     $('#user-dashboard').show();
+
 };
 
 userView.setUserData = function() {}
