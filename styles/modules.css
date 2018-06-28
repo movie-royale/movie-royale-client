@@ -2,6 +2,10 @@
 
 /* for search page and relate */
 
+.slick-slide {
+    outline:none;
+}
+
 .movie-preview {
     /* position: relative; */
     margin: 20px auto;
