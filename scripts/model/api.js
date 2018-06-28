@@ -126,13 +126,17 @@ $('#poster').on('click', 'img', function () {
 
             console.log(app.mostRecentResults.results[i].name, ' was clicked WOOOOOOT');
             $('#title').empty().append(title)
-            $('#release-date').empty().append(date)
+            $('#release-date').empty().append(`Release date: ${date}`)
             $('#description').empty().append(app.mostRecentResults.results[i].overview)
             $('#poster-path').empty().attr("src", `http://image.tmdb.org/t/p/w500/${app.mostRecentResults.results[i].poster_path}`)
 
         }
     }
     // console.log(app.mostRecentResults)
-
+    $('#movie-detail-popup').show(200);
 
 });
+
+$('#close-detail').on('click',function(){
+    $('#movie-detail-popup').hide();
+})

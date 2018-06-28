@@ -55,3 +55,5 @@
 
 //     });
 // });
+
+$('#movie-detail-popup').hide();

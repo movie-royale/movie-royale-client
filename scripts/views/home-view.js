@@ -14,7 +14,9 @@ function resetter() {
 // initialize standard login
 homeView.initLoginView = function() {
     resetter();
-    $('#home').show();
+    // $('#home').show();
+    $('#home').show(500);
+
 
     // routes to user dashboard on form submit
     $('.login-form').on('submit', function() {
