@@ -124,7 +124,8 @@ $('#poster').on('click', 'img', function () {
             }
 
 
-            console.log(app.mostRecentResults.results[i].name, ' was clicked WOOOOOOT');
+
+            console.log(title, ' was clicked WOOOOOOT');
             $('#title').empty().append(title)
             $('#release-date').empty().append(`Release date: ${date}`)
             $('#description').empty().append(app.mostRecentResults.results[i].overview)
