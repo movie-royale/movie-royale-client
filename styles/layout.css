@@ -56,10 +56,48 @@ body {
     background-color: var(--denim);
 }
 
+/* footer  */
+
 footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     color: white;
     height: 12vh;
     background-color: var(--steel-nav);
+    box-shadow: 10px -5px 10px #443;
+}
+
+footer #tmdb-logo {
+    margin: auto;
+}
+
+footer #copy-right {
+    margin: auto;
+}
+
+footer #contact-us {
+    margin: auto;
+}
+
+#gh-logo {
+    display: inline-block;
+    background-image: url("../src/gh.png");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+
+#cf-logo {
+    display: inline-block;
+    background-image: url("../src/cflogo.png");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+
+#gh-logo:hover, #cf-logo:hover {
+    transition-duration: 200ms;
+    transform:scale(1.2);
 }
 
 /* //////media query for hamburger menu////// */

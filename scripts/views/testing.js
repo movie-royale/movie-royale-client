@@ -56,4 +56,4 @@
 //     });
 // });
 
-$('#movie-detail-popup').hide();
+// $('#movie-detail-popup').hide();
