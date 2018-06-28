@@ -4,6 +4,24 @@
     outline: none;
 }
 
+#fetch {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: var(--steel-nav);
+    max-width: 30vw;
+}
+
+#term {
+    /* color: var(--marigold-button); */
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+}
+
+#search {
+    height: 3rem;
+    font-family: 'Roboto Slab', serif;
+}
+
 .movie-preview {
     /* position: relative; */
     margin: 20px auto;
@@ -69,8 +87,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 1em; 
-    
+    padding: 1em;
 }
 
 #main-login h1 {
@@ -96,24 +113,6 @@
 }
 
 
-@media only screen and (max-width: 800px) {
-    .movie-preview img {
-        min-width: 220px;
-        margin: 0px auto;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .team-info-movies ul {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    }
-    .movie-preview img {
-        min-width: 300px;
-        margin: 0px auto;
-    }
-}
-
 /* for popup movie detail */
 
 #movie-detail-popup {
@@ -122,7 +121,7 @@
     grid-template-areas: "poster info" "poster button";
     width: 70vw;
     height: auto;
-    margin: 0px auto;
+    margin: 0px 5% auto;
     padding: 1em;
     opacity: 1;
     background-color: var( --steel-nav);
@@ -133,11 +132,17 @@
 #movie-detail-poster {
     grid-area: poster;
     margin: 0px auto;
+    width: 30vw;
+}
+
+#poster-path {
+    width: 100%;
 }
 
 #movie-detail-info {
     grid-area: info;
     padding: 1em;
+    width: 30vw;
 }
 
 #stupid-button {
@@ -146,9 +151,10 @@
 }
 
 button {
+    font-family: 'Roboto Slab', serif;
     display: inline-block;
     border: none;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     margin: 0;
     text-decoration: none;
     color: white;
@@ -166,6 +172,12 @@ button:hover {
     box-shadow: 5px 7px 5px #554;
 }
 
+#close-detail {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 /* //testing */
 
 .testing p {
@@ -174,3 +186,70 @@ button:hover {
     height: 200px;
     background-size: cover;
 }
+
+/* media query */
+
+
+@media only screen and (max-width: 800px) {
+    .movie-preview img {
+        min-width: 220px;
+        margin: 0px auto;
+    }
+    #movie-detail-popup {
+        position: absolute;
+        display: grid;
+        grid-template-areas: "poster" "info" "button";
+        width: 70vw;
+    }
+    #movie-detail-poster {
+        grid-area: poster;
+        margin: 0px auto;
+        width: 60vw;
+    }
+    #poster-path {
+        width: 100%;
+    }
+    #movie-detail-info {
+        grid-area: info;
+        padding: 1em;
+        width: 60vw;
+    }
+    #stupid-button {
+        grid-area: button;
+        margin: 0px auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .team-info-movies ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .movie-preview img {
+        min-width: 300px;
+        margin: 0px auto;
+    }
+    #movie-detail-popup {
+        display: grid;
+        grid-template-areas: "poster" "info" "button";
+        width: 90vw;
+    }
+    #movie-detail-poster {
+        grid-area: poster;
+        margin: 0px auto;
+        width: 80vw;
+    }
+    #poster-path {
+        width: 100%;
+    }
+    #movie-detail-info {
+        grid-area: info;
+        padding: 1em;
+        width: 80vw;
+    }
+    #stupid-button {
+        grid-area: button;
+        margin: 0px auto;
+    }
+}
+/*  */

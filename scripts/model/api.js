@@ -17,6 +17,7 @@ const api_key = "1d51b32090673b3394923b86194480f3";
 // Search TMDB for movies and render results to page
 function getPoster(e) {
     // e.preventDefault();
+    $('#movie-detail-popup').hide(100);
     var film = $('#term').val();
     if (film == '') {
 
@@ -139,5 +140,5 @@ $('#poster').on('click', 'img', function () {
 });
 
 $('#close-detail').on('click',function(){
-    $('#movie-detail-popup').hide();
+    $('#movie-detail-popup').hide(200);
 })
