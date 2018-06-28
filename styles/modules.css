@@ -22,9 +22,8 @@
 }
 
 .movie-preview img {
-    min-width: 180px;
-    width: 12vw;
-    height: auto;
+    min-width: 200px;
+    width: 15vw;
     margin: 0px auto;
 }
 
@@ -62,7 +61,40 @@
     transform: scale(1.5);
 }
 
-@media only screen and (max-width: 960px) {
+#main-login {
+    text-align: center;
+    outline: 2px solid white;
+    background-color: var(--steel-nav);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+}
+
+#main-login h1 {
+    color: var(--marigold-button);
+}
+
+#main-login h2 {
+    margin-top: .5em;
+}
+
+.login-form {
+    padding: 1em;
+}
+
+.form-group {
+    margin-top: .5em;
+}
+
+.login-form button {
+    padding: 1em;
+    background-color: var(--screen-panel);
+    font-size: .75em;
+}
+
+@media only screen and (max-width: 800px) {
     .movie-preview img {
         min-width: 220px;
         margin: 0px auto;
@@ -106,6 +138,25 @@
 
 #stupid-button {
     grid-area: button;
+    margin: 0px auto;
+}
+
+#add-movie {
+    background-color: var(--marigold-button);
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    color:white;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    /* transition: background 250ms ease-in-out, 
+                /* transform 150ms ease; */
+    /* -webkit-appearance: none;
+    -moz-appearance: none; */ 
 }
 
 /* //testing */
@@ -116,36 +167,3 @@
     height: 200px;
     background-size: cover;
 }
-
-/* for popup movie detail */
-
-#movie-detail-popup {
-     display: grid;
-     grid-template-areas: "poster info" "poster button";
-     width: 70vw;
-     height: auto;
-     margin: 2em auto;
-     padding: 1em;
-     opacity: 0.7;
-     background-color: var( --steel-nav);
-     box-shadow: 10px 10px 10px #443;
-    
-}
-
-#movie-detail-poster {
-     grid-area: poster;
-     margin: 0px auto;
-    
-}
-
-#movie-detail-info {
-     grid-area: info;
-     padding: 1em;
-    
-}
-
-#stupid-button {
-    grid-area: button;
-
-}
-

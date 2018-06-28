@@ -14,6 +14,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Roboto+Slab" rel="stylesheet">
 
+    <script id="movies-template" type="text/x-handlebars-template">
+
+        <!-- $('#title').val -->
+        <!-- $('#release_date').val -->
+            <!-- $('#description').val -->
+            <!-- $('#poster_path').val -->
+
+        <div id="movie-detail-popup">
+            <div id="movie-detail-poster">
+                <!-- <img src="{{poster_path}}"/> -->
+                <img src="http://via.placeholder.com/400x600" />
+            </div>
+            <div id="movie-detail-info">
+                <h2>{{title}}</h2>
+                <br>
+                <p>Release date: {{release_date}}</p>
+                <br>
+                <p>Description: {{{over_view}}}_</p>  
+            </div>
+            <div id="stupid-button">
+
+                <button id="add-movie" type="submit">Add to your collection</button>
+
+            </div>
+        </div>
+
+
+    </script>
+
     <title>Movie Royale</title>
 
 
@@ -99,8 +128,6 @@
             <!-- testing -->
             <section id="features" class="blue">
 
-
-
                 <div id="movie-detail-popup">
                     <div id="movie-detail-poster">
                         <!-- <img src="{{poster_url}}"/> -->
@@ -118,20 +145,12 @@
                             molestiae error, hic consectetur in quibusdam cumque delectus cum quia accusantium enim quod?</p>
                     </div>
                     <div id="stupid-button">
-                        <ul>
-                            <li>
-                                <button id="add-movie" type="submit">add to list</button>
-                            </li>
-                            <li>
-                                <button>return</button>
-                            </li>
-                        </ul>
+
+                        <button id="add-movie" type="submit">Add to your collection</button>
+
                     </div>
                 </div>
 
-                <div class="content">
-
-                </div>
             </section>
             <!-- testing -->
             <hr>
