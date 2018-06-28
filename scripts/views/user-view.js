@@ -12,7 +12,7 @@ function resetter() {
 
 userView.initUserDashboard = function() {
     resetter();
-    $('#user-dashboard').show();
+    $('#user-dashboard').show(500);
     
 };
 

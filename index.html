@@ -12,18 +12,14 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Roboto+Slab" rel="stylesheet" default-src="google">
+
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Roboto+Slab" rel="stylesheet">
+    <link rel="shortcut icon" href="./src/mr-logo.png">
 
     <script id="movies-template" type="text/x-handlebars-template">
 
-        <!-- $('#title').val -->
-        <!-- $('#release_date').val -->
-            <!-- $('#description').val -->
-            <!-- $('#poster_path').val -->
-
         <div id="movie-detail-popup">
             <div id="movie-detail-poster">
-                <!-- <img src="{{poster_path}}"/> -->
                 <img src="http://via.placeholder.com/400x600" />
             </div>
             <div id="movie-detail-info">
@@ -45,7 +41,7 @@
 
     <title>Movie Royale</title>
 
-        
+
 
 </head>
 
@@ -56,12 +52,20 @@
             <div id="rm-logo"></div>
             <nav>
                 <div id="menu-icon" class="fa fa-bars fa-2x"></div>
-                <ul>
+                <ul id="active-menu">
 
-                    <li><a class="scroll" href="/">HOME</a></li>
-                    <li><a class="scroll" href="/dashboard">USER DASHBOARD</a></li>
-                    <li><a class="scroll" href="/leaderboards">LEADERBOARDS</a></li>
-                    <li><a class="scroll" href="/about-us">ABOUT US</a></li>
+                    <li>
+                        <a class="scroll" href="/">HOME</a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="/dashboard">USER DASHBOARD</a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="/leaderboards">LEADERBOARDS</a>
+                    </li>
+                    <li>
+                        <a class="scroll" href="/about-us">ABOUT US</a>
+                    </li>
 
                 </ul>
             </nav>
@@ -98,109 +102,79 @@
                     </div>
                 </form>
             </div>
-
-            <hr>
         </section>
         <section id="leaderboards" class="container">
             <h2>LEADERBOARDS</h2>
-            <!-- testing -->
+
             <section id="features" class="blue">
 
-                <div id="movie-detail-popup">
+                <!-- <div id="movie-detail-popup">
                     <div id="movie-detail-poster">
-                        <!-- <img src="{{poster_url}}"/> -->
-                        <img src="http://via.placeholder.com/400x600" />
+
+                        <img id="poster-path" src="http://via.placeholder.com/400x600" />
                     </div>
                     <div id="movie-detail-info">
-                        <h2>{{title}}</h2>
-                        <input id="title" type="text" readonly>
-                        <input id="release_date" type="text" readonly>
-                        <input id="description" type="text" readonly>
-                        <input id="poster_path" type="text" readonly>
+                        <h2 id="title"></h2>
 
                         <br>
-                        <p>Release date: {{release_date}}</p>
+                        <p id="release-date"></p>
                         <br>
-                        <p>Description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis nisi
-                            deleniti exercitationem similique sit natus! Necessitatibus, maxime, blanditiis impedit dicta,
-                            alias tempora placeat veritatis voluptatibus nulla velit tempore ut?Lorem ipsum dolor, sit amet
-                            consectetur adipisicing elit. Vitae ea dignissimos laboriosam totam, ex, provident natus veniam
-                            molestiae error, hic consectetur in quibusdam cumque delectus cum quia accusantium enim quod?</p>
+                        <p id="description"></p>
                     </div>
                     <div id="stupid-button">
 
                         <button id="add" type="submit">Add to your collection</button>
 
                     </div>
-                </div>
+                </div> -->
 
             </section>
 
-                <div class="form-group">
-                    <button id="login" type="submit" value="login">LOGIN</button>
-                </div>
-            </form>
-        </div>
-
-    </section>
-    <section id="user-dashboard" class="container">
-        <h1>USER DASHBOARD</h1>
-
-        <section id="user-info"></section>
-
-        <div class="search">
-            <h2>Movie Search</h2>
-            <div id="fetch">
-                <input type="text" placeholder="Search movies here" id="term" />
-                <button id="search">Find</button>
             </div>
-            <hr>
-            <div id="poster" class="poster-div">
-                <div id="search-error"></div>
-            </div>
-        </div>
 
-        <hr>
-    </section>
-    <section id="leaderboards" class="container">
-        <h2>LEADERBOARDS</h2>
-        <!-- testing -->
-        <section id="features" class="blue">
+        </section>
+        <section id="user-dashboard" class="container">
+            <h1>USER DASHBOARD</h1>
 
-            <div id="movie-detail-popup">
-                <div id="movie-detail-poster">
-                    <!-- <img src="{{poster_url}}"/> -->
-                    <img src="http://via.placeholder.com/400x600" />
+            <section id="user-info"></section>
+
+            <div class="search">
+                <h2>Movie Search</h2>
+                <div id="fetch">
+                    <input type="text" placeholder="Search movies here" id="term" />
+                    <button id="search">Find</button>
                 </div>
-                <div id="movie-detail-info">
-                    <h2>{{title}}</h2>
-                    <br>
-                    <p>Release date: {{release_date}}</p>
-                    <br>
-                    <p>Description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis nisi
-                        deleniti exercitationem similique sit natus! Necessitatibus, maxime, blanditiis impedit dicta,
-                        alias tempora placeat veritatis voluptatibus nulla velit tempore ut?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae ea dignissimos laboriosam totam, ex, provident natus veniam molestiae error, hic consectetur in quibusdam cumque delectus cum quia accusantium enim quod?
-                    </p>
-                </div>
-                <div id="stupid-button">
-                    <ul>
-                        <li>
-                            <button id="add-movie" type="submit">add to list</button>
-                        </li>
-                        <li>
-                            <button>return</button>
-                        </li>
-                    </ul>
+                <hr>
+                    <!-- testing -->
+                    <div id="movie-detail-popup">
+                            <div id="movie-detail-poster">
+        
+                                <img id="poster-path" src="http://via.placeholder.com/400x600" />
+                            </div>
+                            <div id="movie-detail-info">
+                                <h2 id="title"></h2>
+        
+                                <br>
+                                <p id="release-date"></p>
+                                <br>
+                                <p id="description"></p>
+                            </div>
+                            <div id="stupid-button">
+        
+                                <button id="add" type="submit">Add to your collection</button>
+                                <button id="close-detail">Close</button>
+                            </div>
+                        </div>
+        
+                    <!-- testing -->
+                    <div id="poster" class="poster-div"></div>
+                    <div id="search-error"></div>
                 </div>
             </div>
 
-            <div class="content">
 
-            </div>
         </section>
 
-            <!-- testing -->
-            <hr>
         </section>
         <section id="about-us" class="container">
             <h2>ABOUT US</h2>
@@ -271,17 +245,17 @@
             </div>
         </section>
 
-        <hr>
+
 
     </main>
 
     <footer>
 
         <h3>CONTACT US </h3>
-        <hr>
+
         <div id="tmdb-logo">
         </div>
-        <br>
+
         <div>
             <p>&copy; Movie Royale 2018</p>
         </div>

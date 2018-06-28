@@ -12,7 +12,7 @@ function resetter() {
 
 aboutView.initAboutView = function() {
     resetter();
-    $('#about-us').show();
+    $('#about-us').show(500);
     
 };
 
