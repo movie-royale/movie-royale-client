@@ -28,28 +28,43 @@ var app = app || {};
 
     // Load instances
     Users.all = [];
+    Users.one = [];
 
     // AJAX fetch and load
     Users.loadAll = rows => {
         Users.all = rows.map((user) => new Users(user));
     };
 
+    Users.loadOne = rows => {
+        Users.one = rows.map((user) => new Users(user));
+    };
+
     // AJAX fetch and load
-    Users.fetchAll = callback => {
+    Users.fetchAll = () => {
         $.get(`${app.ENV.apiURL}/api/v1/users`)
             .then(results => {
                 Users.loadAll(results);
-                callback();
+                // callback();
             })
     };
 
-    Users.fetchOne = (id, callback) => {
+    Users.fetchOne = (id) => {
         $.ajax({
             url: `${app.ENV.apiURL}/api/v1/users/${id}`,
             method: 'GET',
             data: {
-                users_id: 1, // need to pass a variable in here to select specific users id
+                users_id: id
             }
+        })
+            .then(results => {
+                Users.loadOne(results);
+            })
+    };
+
+    Users.deleteOne = (id, callback) => {
+        $.ajax({
+            url: `${app.ENV.apiURL}/api/v1/users/${id}`,
+            method: 'DELETE'
         })
             .then(results => {
                 Users.loadAll(results);
@@ -57,13 +72,10 @@ var app = app || {};
             })
     };
 
-    Users.deleteOne = (id, callback) => {
+    Users.truncateTable = (callback) => {
         $.ajax({
-            url: `${app.ENV.apiURL}/api/v1/users/${id}`,
-            method: 'DELETE',
-            data: {
-                users_id: 1, // need to pass a variable in here to select specific users id
-            }
+            url: `${app.ENV.apiURL}/api/v1/users`,
+            method: 'DELETE'
         })
             .then(results => {
                 Users.loadAll(results);
@@ -79,7 +91,7 @@ var app = app || {};
         })
             .then(console.log('it works!'))
             .then(results => {
-                Users.loadOne(results);
+                Users.loadAll(results);
                 // FIX THIS SHIT
                 callback();
             })

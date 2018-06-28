@@ -6,15 +6,15 @@ var app = app || {};
 
 let userView = {};
 
-function resetter() {
+userView.initUserDashboard = function() {
+
     $('.container').hide();
+    $('#dashboard-button').show();
+    $('#user-dashboard').show();
+
 };
 
-userView.initUserDashboard = function() {
-    resetter();
-    $('#user-dashboard').show(500);
-    
-};
+userView.setUserData = function() {}
 
 module.userView = userView;
 
