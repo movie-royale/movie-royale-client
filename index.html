@@ -14,35 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Roboto+Slab" rel="stylesheet">
 
-    <script id="movie-detail-template" type="text/x-handlebars-template">
-        <div id="movie-detail-popup">
-                <div id="movie-detail-poster">
-                    <!-- <img src="{{poster_url}}"/> -->
-                    <img src="http://via.placeholder.com/400x600" />
-                </div>
-                <div id="movie-detail-info">
-                    <h2>{{title}}</h2>
-
-                    <p>Release date: {{release_date}}</p>
-                    <p>Description: {{{description}}}</p>
-                </div>
-                <div id="stupid-button">
-                    <ul>
-                        <li>
-                            <button id="add-movie" type="submit">add to list</button>
-                        </li>
-                        <li>
-                            <button>return</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-     </script>
     <title>Movie Royale</title>
 
 
 </head>
-
 
 <body>
 
@@ -50,7 +25,7 @@
         <div class="header">
             <div id="rm-logo"></div>
             <nav>
-                <div id="icon-menu" class="fa fa-bars fa-2x"></div>
+                <div id="menu-icon" class="fa fa-bars fa-2x"></div>
                 <ul>
                     <li><a class="scroll" href="#home">HOME</a></li>
                     <li><a class="scroll" href="#user-dashboard">USER DASHBOARD</a></li>
@@ -62,12 +37,11 @@
         </div>
     </header>
     <main>
-        <hr>
+        
         <section id="home" class="container">
-            <h1>Movie Royale</h1>
-            <hr>
-            <div>
-                <!-- everything in this div handles the login form which is sent to the users database. this form is populated by the user -->
+            <div id="main-login">
+                <h1>Welcome to Movie Royale</h1>
+                <h2>Login</h2>
                 <form class="login-form" action="#" method="post">
 
                     <div class="form-group">
@@ -88,49 +62,12 @@
                         <input id="email" type="email" name="email" required>
                     </div>
 
-                    <div>
-                        <input id="login" type="submit" value="login">
+                    <div class="form-group">
+                        <button id="login" type="submit" value="login">LOGIN</button>
                     </div>
                 </form>
             </div>
 
-            <div>
-                <!-- everything in this div handles the movie data (form) which is sent to the movies database. this form is populated by the API -->
-                <form class="movies-details" action="#" method="post">
-
-                    <div class="form-group">
-                        <label for="title">Title</label>
-                        <br>
-                        <input id="title" type="text" name="title" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="release_date">release_date</label>
-                        <br>
-                        <input id="release_date" type="release_date" name="release_date" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="description">description</label>
-                        <br>
-                        <input id="description" type="description" name="description" required>
-                    </div>
-
-                    <div class="form-group">
-                            <label for="poster_path">poster_path</label>
-                            <br>
-                            <input id="poster_path" type="poster_path" name="poster_path" required>
-                        </div>
-
-                    <div>
-                        <input id="add" type="submit" value="add">
-                    </div>
-                </form>
-            </div>
-
-
-
-            <hr>
         </section>
         <section id="user-dashboard" class="container">
             <h1>USER DASHBOARD</h1>
@@ -152,7 +89,6 @@
         <section id="leaderboards" class="container">
             <h2>LEADERBOARDS</h2>
             <!-- testing -->
-            <hr>
             <section id="features" class="blue">
                 <div id="movie-detail-popup">
                     <div id="movie-detail-poster">
