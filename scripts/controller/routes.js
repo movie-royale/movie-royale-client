@@ -4,7 +4,7 @@
 page('/', () => app.homeView.initLoginView());
 page('/movie-royale-client', () => app.homeView.initLoginView());
 // Initializes user dashboard
-page('/users/:user_id/dashboard', () => app.userView.initUserDashboard());
+page('/dashboard/:users_id', () => app.userView.initUserDashboard());
 page('/dashboard', () => app.userView.initUserDashboard());
 // Initializes individual user profile from user search/leaderboard link **stretch**
 // page('/users/:user_id', (ctx) => app.userView.initUser(ctx));
