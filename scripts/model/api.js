@@ -108,7 +108,7 @@ $('#poster').on('click', 'img', function () {
             }
 
 
-            console.log(app.mostRecentResults.results[i].name, ' was clicked WOOOOOOT');
+            console.log(title, ' was clicked WOOOOOOT');
             $('#title').val(title)
             $('#release_date').val(date)
             $('#description').val(app.mostRecentResults.results[i].overview)
