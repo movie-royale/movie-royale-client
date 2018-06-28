@@ -52,21 +52,12 @@
             <div id="rm-logo"></div>
             <nav>
                 <div id="menu-icon" class="fa fa-bars fa-2x"></div>
-                <ul id="active-menu">
 
-                    <li>
-                        <a class="scroll" href="/">HOME</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="/dashboard">USER DASHBOARD</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="/leaderboards">LEADERBOARDS</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="/about-us">ABOUT US</a>
-                    </li>
-
+                <ul>
+                    <li><a class="scroll" href="/">HOME</a></li>
+                    <li id="dashboard-button"><a class="scroll" href="/dashboard">USER DASHBOARD</a></li>
+                    <li><a class="scroll" href="/leaderboards">LEADERBOARDS</a></li>
+                    <li><a class="scroll" href="/about-us">ABOUT US</a></li>
                 </ul>
             </nav>
 
@@ -77,30 +68,31 @@
             <div id="main-login">
                 <h1>Welcome to Movie Royale</h1>
                 <h2>Login</h2>
+
                 <form class="login-form" action="#" method="post">
 
-                    <div class="form-group">
-                        <label for="username">Login ID</label>
-                        <br>
-                        <input id="username" type="text" name="username" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <br>
-                        <input id="password" type="password" name="password" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <br>
-                        <input id="email" type="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <button id="login" type="submit" value="login">LOGIN</button>
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <label for="username">Login ID</label>
+                            <br>
+                            <input id="username" type="text" name="username" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <br>
+                            <input id="password" type="password" name="password" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <br>
+                            <input id="email" type="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button id="login" type="submit" value="login">LOGIN</button>
+                        </div>
+                    </form>
             </div>
         </section>
         <section id="leaderboards" class="container">
