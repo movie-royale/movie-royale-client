@@ -45,6 +45,7 @@
 
     <title>Movie Royale</title>
 
+        
 
 </head>
 
@@ -56,25 +57,18 @@
             <nav>
                 <div id="menu-icon" class="fa fa-bars fa-2x"></div>
                 <ul>
-                    <li>
-                        <a class="scroll" href="#home">HOME</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="#user-dashboard">USER DASHBOARD</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="#leaderboards">LEADERBOARDS</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="#about-us">ABOUT US</a>
-                    </li>
+
+                    <li><a class="scroll" href="/">HOME</a></li>
+                    <li><a class="scroll" href="/dashboard">USER DASHBOARD</a></li>
+                    <li><a class="scroll" href="/leaderboards">LEADERBOARDS</a></li>
+                    <li><a class="scroll" href="/about-us">ABOUT US</a></li>
+
                 </ul>
             </nav>
 
         </div>
     </header>
     <main>
-
         <section id="home" class="container">
             <div id="main-login">
                 <h1>Welcome to Movie Royale</h1>
@@ -103,22 +97,6 @@
                         <button id="login" type="submit" value="login">LOGIN</button>
                     </div>
                 </form>
-            </div>
-
-        </section>
-        <section id="user-dashboard" class="container">
-            <h1>USER DASHBOARD</h1>
-
-            <div class="container search">
-                <h2>Movie Search</h2>
-                <div id="fetch">
-                    <input type="text" placeholder="Search movies here" id="term" />
-                    <button id="search">Find</button>
-                </div>
-                <hr>
-                <div id="poster" class="poster-div">
-                    <div id="search-error"></div>
-                </div>
             </div>
 
             <hr>
@@ -157,6 +135,70 @@
                 </div>
 
             </section>
+
+                <div class="form-group">
+                    <button id="login" type="submit" value="login">LOGIN</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <section id="user-dashboard" class="container">
+        <h1>USER DASHBOARD</h1>
+
+        <section id="user-info"></section>
+
+        <div class="search">
+            <h2>Movie Search</h2>
+            <div id="fetch">
+                <input type="text" placeholder="Search movies here" id="term" />
+                <button id="search">Find</button>
+            </div>
+            <hr>
+            <div id="poster" class="poster-div">
+                <div id="search-error"></div>
+            </div>
+        </div>
+
+        <hr>
+    </section>
+    <section id="leaderboards" class="container">
+        <h2>LEADERBOARDS</h2>
+        <!-- testing -->
+        <section id="features" class="blue">
+
+            <div id="movie-detail-popup">
+                <div id="movie-detail-poster">
+                    <!-- <img src="{{poster_url}}"/> -->
+                    <img src="http://via.placeholder.com/400x600" />
+                </div>
+                <div id="movie-detail-info">
+                    <h2>{{title}}</h2>
+                    <br>
+                    <p>Release date: {{release_date}}</p>
+                    <br>
+                    <p>Description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veritatis nisi
+                        deleniti exercitationem similique sit natus! Necessitatibus, maxime, blanditiis impedit dicta,
+                        alias tempora placeat veritatis voluptatibus nulla velit tempore ut?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae ea dignissimos laboriosam totam, ex, provident natus veniam molestiae error, hic consectetur in quibusdam cumque delectus cum quia accusantium enim quod?
+                    </p>
+                </div>
+                <div id="stupid-button">
+                    <ul>
+                        <li>
+                            <button id="add-movie" type="submit">add to list</button>
+                        </li>
+                        <li>
+                            <button>return</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content">
+
+            </div>
+        </section>
+
             <!-- testing -->
             <hr>
         </section>
@@ -254,16 +296,17 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- INTERNAL SCRIPTS -->
-    <script src="scripts/animation.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="scripts/controller/index.js"></script>
     <script src="scripts/views/slick.js"></script>
     <script src="scripts/model/users.js"></script>
     <script src="scripts/model/movies.js"></script>
-    <script src="scripts/views/movie-view.js"></script>
-    <script src="scripts/routing/routes.js"></script>
+    <script src="scripts/views/home-view.js"></script>
+    <script src="scripts/views/user-view.js"></script>
+    <script src="scripts/views/leaderboard-view.js"></script>
+    <script src="scripts/views/about-view.js"></script>
     <script src="scripts/views/testing.js"></script>
-    <script src="scripts/animation.js"></script>
     <script src="scripts/model/api.js"></script>
+    <script src="scripts/controller/routes.js"></script>
 
 
 </body>
