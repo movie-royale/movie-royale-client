@@ -121,7 +121,7 @@ footer #contact-us {
         font-size: 1em;
         margin-right: 1em;
     }
-    nav li:hover {
+    nav li:active {
         background-color: var(--marigold-button);
     }
     nav li:active {

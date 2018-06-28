@@ -6,14 +6,12 @@ var app = app || {};
 
 let leaderboardView = {};
 
-function resetter() {
-    $('.container').hide();
-};
 
 leaderboardView.initLeaderboardView = function() {
-    resetter();
-    $('#leaderboards').show(500);
-    
+
+    $('.container').hide();
+    $('#leaderboards').show();
+  
 };
 
 module.leaderboardView = leaderboardView;

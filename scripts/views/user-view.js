@@ -6,15 +6,19 @@ var app = app || {};
 
 let userView = {};
 
-function resetter() {
+userView.initUserDashboard = function(ctx) {
+    $('#poster').empty();
+    $('#term').val('');
     $('.container').hide();
-};
+    $('#dashboard-button').show();
+    $('#user-dashboard').show();
 
-userView.initUserDashboard = function() {
-    resetter();
-    $('#user-dashboard').show(500);
+    // console.log(ctx.params);
+    // app.Users.fetchOne(ctx);
     
 };
+
+userView.setUserData = function() {}
 
 module.userView = userView;
 

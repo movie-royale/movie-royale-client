@@ -6,21 +6,31 @@ var app = app || {};
 
 var homeView = {};
 
-// reset the page
-function resetter() {
-    $('.container').hide();
-};
-
 // initialize standard login
 homeView.initLoginView = function() {
-    resetter();
-    // $('#home').show();
-    $('#home').show(500);
 
+    $('.container').hide();
+    $('#dashboard-button').hide();
+    $('#home').show();
 
+    app.Users.fetchAll();
     // routes to user dashboard on form submit
-    $('.login-form').on('submit', function() {
-        page(`/users/${this.data.user_id}/dashboard`);
+    $('#login').on('click', function(e) {
+        e.preventDefault();
+        console.log(app.Users.all.length);
+        for (let i = 0; i < app.Users.all.length; i++) {
+            console.log('in the for loop');
+            if ($('#username').val() == app.Users.all[i].username) {
+                console.log('userId inside the for loop')
+                app.Users.fetchAll();
+                var userId = app.Users.all[i].users_id;
+            } 
+            else {
+                app.Users.fetchAll();
+                var userId = app.Users.all[i].users_id;
+            }
+        };
+        page(`/dashboard/${userId}`);
     })
 };
 
