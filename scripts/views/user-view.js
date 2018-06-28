@@ -9,9 +9,9 @@ let userView = {};
 userView.initUserDashboard = function(ctx) {
     $('#poster').empty();
     $('#term').val('');
-    $('.container').hide();
+    $('.container').hide(200);
     $('#dashboard-button').show();
-    $('#user-dashboard').show();
+    $('#user-dashboard').show(200);
 
     // console.log(ctx.params);
     // app.Users.fetchOne(ctx);

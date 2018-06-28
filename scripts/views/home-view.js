@@ -9,14 +9,14 @@ var homeView = {};
 // initialize standard login
 homeView.initLoginView = function() {
 
-    $('.container').hide();
+    $('.container').hide(100);
     $('#dashboard-button').hide();
-    $('#home').show();
+    $('#home').show(200);
 
     app.Users.fetchAll();
     // routes to user dashboard on form submit
     $('#login').on('click', function(e) {
-        e.preventDefault();
+        // e.preventDefault();
         console.log(app.Users.all.length);
         for (let i = 0; i < app.Users.all.length; i++) {
             console.log('in the for loop');

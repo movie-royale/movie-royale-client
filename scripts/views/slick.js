@@ -56,14 +56,26 @@ function fkSlider() {
 
 
 //slick carousel template
-$(document).ready(function () {
-    $('.testing-div').slick({
+// $(document).ready(function () {
+//     $('.team-info-movies').slick({
+//         infinite: true,
+//         slidesToShow: 4,
+//         slidesToScroll: 100,
+
+//     });
+// });
+
+
+function showteam() {
+    $('.team-info-movies').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 100,
 
-    });
-});
+    })
+}
+showteam();
+
 
 //new toy
 $(document).ready(function () {
@@ -106,3 +118,15 @@ $(document).ready(function () {
         ]
     });
 });
+
+
+
+//for about page
+// $(document).ready(function () {
+
+//     $('#team-info-movies').slick({
+//         infinite: true,
+//         slidesToShow: 3,
+//         slidesToScroll: 3
+//     });
+// })
