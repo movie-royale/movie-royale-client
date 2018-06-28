@@ -230,9 +230,11 @@ button:hover {
         margin: 0px auto;
     }
     #movie-detail-popup {
+        position: sticky;
         display: grid;
         grid-template-areas: "poster" "info" "button";
         width: 90vw;
+        top:10vh;
     }
     #movie-detail-poster {
         grid-area: poster;

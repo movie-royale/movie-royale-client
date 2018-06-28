@@ -142,3 +142,5 @@ $('#poster').on('click', 'img', function () {
 $('#close-detail').on('click',function(){
     $('#movie-detail-popup').hide(200);
 })
+//hide pop up detail
+$('#movie-detail-popup').hide();
