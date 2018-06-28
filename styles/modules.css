@@ -3,7 +3,7 @@
 /* for search page and relate */
 
 .slick-slide {
-    outline:none;
+    outline: none;
 }
 
 .movie-preview {
@@ -24,6 +24,7 @@
 }
 
 .movie-preview img {
+
     min-width: 200px;
     width: 15vw;
     margin: 0px auto;
@@ -116,6 +117,35 @@
     }
 }
 
+
+/* for popup movie detail */
+
+#movie-detail-popup {
+    display: grid;
+    grid-template-areas: "poster info" "poster button";
+    width: 70vw;
+    height: auto;
+    margin: 2em auto;
+    padding: 1em;
+    opacity: 0.7;
+    background-color: var( --steel-nav);
+    box-shadow: 10px 10px 10px #443;
+}
+
+#movie-detail-poster {
+    grid-area: poster;
+    margin: 0px auto;
+}
+
+#movie-detail-info {
+    grid-area: info;
+    padding: 1em;
+}
+
+#stupid-button {
+    grid-area: button;
+}
+
 /* //testing */
 
 .testing p {
@@ -124,3 +154,5 @@
     height: 200px;
     background-size: cover;
 }
+
+
