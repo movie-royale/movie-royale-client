@@ -1,40 +1,37 @@
-/*for header*/
 
-.header {
-    position: relative;
+
+/* for search page and relate */
+
+.slick-slide {
+    outline:none;
 }
 
-#navbar ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
-    grid-gap: 2em;
-    margin: 0px auto;
-    justify-items: center;
+.movie-preview {
+    /* position: relative; */
+    margin: 20px auto;
+    padding: 1em;
 }
 
-a, a:visited, a:active {
-    text-decoration: none;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-    color: inherit;
-}
-
-/* 
-a, a:visited, a:hover, a:active {
-  } */
-
-#navbar ul li {
-    display: inline-block;
-    width: 100%;
-    /* background-color: var(--marine); */
+.movie-preview p {
+    /* position: absolute; */
     text-align: center;
-    text-decoration: none;
+    font-weight: bold;
+    /* outline: dotted; */
 }
 
-#navbar ul li a:hover {
-  
-    text-shadow: 0 0 5px #fff,0 0 10px #fff, 0 0 20px #F7CE3E, 0 0 25px #F7CE3E;
+.movie-preview:hover {
+    transform: scale(1.1);
+}
+
+.movie-preview img {
+    min-width: 200px;
+    width: 15vw;
+    margin: 0px auto;
+}
+
+.movie-preview img:hover {
+    outline: groove var(--marigold-button);
+    opacity: 0.7;
 }
 
 /* for about us page  */
@@ -66,12 +63,64 @@ a, a:visited, a:hover, a:active {
     transform: scale(1.5);
 }
 
-@media only screen and (min-width: 680px) {
-    .team-info-movies ul {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    }
+#main-login {
+    text-align: center;
+    outline: 2px solid white;
+    background-color: var(--steel-nav);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+}
+
+#main-login h1 {
+    color: var(--marigold-button);
+}
+
+#main-login h2 {
+    margin-top: .5em;
+}
+
+.login-form {
+    padding: 1em;
+}
+
+.form-group {
+    margin-top: .5em;
+}
+
+.login-form button {
+    padding: 1em;
+    background-color: var(--screen-panel);
+    font-size: .75em;
 }
 
 
 
+@media only screen and (max-width: 800px) {
+    .movie-preview img {
+        min-width: 220px;
+        margin: 0px auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .team-info-movies ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .movie-preview img {
+        min-width: 300px;
+        margin: 0px auto;
+    }
+}
+
+/* //testing */
+
+.testing p {
+    background-image: url("http://via.placeholder.com/200x200");
+    width: 150px;
+    height: 200px;
+    background-size: cover;
+}

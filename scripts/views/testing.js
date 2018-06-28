@@ -1,28 +1,28 @@
 'use strict';
 
 //header shrink when scroll down
-$(document).on("scroll", function () {
-    if
-    ($(document).scrollTop() > 200) {
-        $("header").addClass("shrink");
-        // $('#navbar').stop().animate({ height: 50 },80);
-        
-    }
-    else {
-        $("header").removeClass("shrink");
-    }
-});
+// $(document).on("scroll", function () {
+//     if
+//     ($(document).scrollTop() > 200) {
+//         $("header").addClass("shrink");
+//         // $('#navbar').stop().animate({ height: 50 },80);
+
+//     }
+//     else {
+//         $("header").removeClass("shrink");
+//     }
+// });
 //testing scrolling 
 
 
 /////smoothing redirect page/////
 $(document).ready(function () {
-let scrollLink=$('.scroll');
+    let scrollLink = $('.scroll');
     // Smooth scrolling
     scrollLink.click(function (event) {
         event.preventDefault();
         $('html').animate({
-            scrollTop: $(this.hash).offset().top-200
+            scrollTop: $(this.hash).offset().top - 200
         }, 1000);
     });
 
@@ -32,7 +32,7 @@ let scrollLink=$('.scroll');
 
         scrollLink.each(function () {
 
-            let sectionOffset = $(this.hash).offset().top -100;
+            let sectionOffset = $(this.hash).offset().top -400;
 
             if (sectionOffset <= scrollbarLocation) {
                 $(this).parent().addClass('active');
@@ -44,3 +44,4 @@ let scrollLink=$('.scroll');
 
 })
 /////smoothing redirect page end here/////
+
