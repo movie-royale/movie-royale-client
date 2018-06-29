@@ -7,6 +7,8 @@ MARINE (Light Green) - #57BC90 - Special text/buttons
 WHITE - For bulk of text 
 */
 
+
+
  :root {
      --screen-panel: #C5C1C0;
      --steel-nav: #0A1612;
@@ -15,7 +17,7 @@ WHITE - For bulk of text
      --marine: #57BC90;
  }
 
- h1 {
+ h1, legend {
     font-family: 'Roboto Slab', serif;
  }
 
@@ -28,7 +30,7 @@ WHITE - For bulk of text
      background-image: url('../src/movie-theater.png');
      background-repeat: no-repeat;
      width: 100%;
-     background-size: cover;
+     background-size: cover; 
  }
 
  #user-dashboard {
@@ -40,7 +42,7 @@ WHITE - For bulk of text
  }
 
  #about-us {
-     background-color: var(--denim);
+     background-color: var(--screen-panel);
  }
 
  h1 {
@@ -53,6 +55,12 @@ WHITE - For bulk of text
 
  a {
      text-decoration: none;
+ }
+
+ legend {
+     font-size: 2em;
+     margin-bottom: 1em;
+     color: var(--marigold-button);
  }
 
  main {
