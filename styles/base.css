@@ -65,10 +65,3 @@ WHITE - For bulk of text
      background-size: cover;
      padding: .3em 0em .3em .5em;
  }
-
- #tmdb-logo {
-     background-image: url("https://www.themoviedb.org/static_cache/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png");
-     width: 13vw;
-     height: 5vw;
-     background-size: cover;
- }

@@ -10,7 +10,7 @@ let leaderboardView = {};
 leaderboardView.initLeaderboardView = function() {
 
     $('.container').hide();
-    $('#leaderboards').show();
+    $('#leaderboards').show(200);
   
 };
 

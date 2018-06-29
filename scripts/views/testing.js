@@ -26,35 +26,31 @@
 //         }, 1000);
 //     });
 
-    // Active link switching
-    // $(window).scroll(function () {
-    //     let scrollbarLocation = $(this).scrollTop();
+// Active link switching
+// $(window).scroll(function () {
+//     let scrollbarLocation = $(this).scrollTop();
 
-    //     scrollLink.each(function () {
+//     scrollLink.each(function () {
 
-    //         let sectionOffset = $(this).attr('href').offset().top -100;
+//         let sectionOffset = $(this).attr('href').offset().top -100;
 
-    //         if (sectionOffset <= scrollbarLocation) {
-    //             $(this).parent().addClass('active');
-    //             $(this).parent().siblings().removeClass('active');
-    //         }
-    //     })
+//         if (sectionOffset <= scrollbarLocation) {
+//             $(this).parent().addClass('active');
+//             $(this).parent().siblings().removeClass('active');
+//         }
+//     })
 
-    // })
+// })
 
 // })
 /////smoothing redirect page end here/////
 
-// $(function() { 
-//     $('#active-menu').on('click','li', function ( e ) {
-//         e.preventDefault();
-//         // $(this).parents('#active-menu').find('li').addClass('active');
-//         $(this).parents('#active-menu').find('li').addClass('active');
-//         console.log(this);
-        // $(activeTab).show();
+function activeTab() {
+    $('#nav-active').on('click', 'li', function (e) {
+        // e.preventDefault();
+        $(this).addClass('active').siblings().removeClass('active');
+        console.log(this);
 
-//     });
-// });
-
-// $('#movie-detail-popup').hide();
-// before merge
+    });
+}
+activeTab();
