@@ -27,7 +27,9 @@ WHITE - For bulk of text
  }
 
  #home {
-     background-color: var(--denim);
+     background-image: url('../src/movie-theater.png');
+     background-repeat: no-repeat;
+     width: 100%;
  }
 
  #user-dashboard {
