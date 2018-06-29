@@ -67,14 +67,11 @@
             <nav>
                 <div id="menu-icon" class="fa fa-bars fa-2x"></div>
                 <ul id="nav-active">
-                    <li id="home-button">
-                        <a class="scroll" href="/">HOME</a>
+                    <li>
+                        <a id="home-button" class="scroll" href="/">HOME</a>
                     </li>
                     <li id="dashboard-button">
-                        <a class="scroll" href="/dashboard">USER DASHBOARD</a>
-                    </li>
-                    <li>
-                        <a class="scroll" href="/leaderboards">LEADERBOARDS</a>
+                        <a class="scroll" href="/dashboard/:user_id">USER DASHBOARD</a>
                     </li>
                     <li>
                         <a class="scroll" href="/about-us">ABOUT US</a>
@@ -87,7 +84,7 @@
     <main>
         <section id="home" class="container">
             <div id="main-login">
-              
+
                 <div id="welcome-message">
                     <h1>Welcome to Movie Royale</h1>
                     <p>Filler text talking about what the app does - Lorem Ipsum yadda yadda..</p>
@@ -126,58 +123,58 @@
             <section id="features" class="blue">
 
 
-        </section>
-        <section id="user-movies" class="container">
-            <h2>MY MOVIES</h2>
+            </section>
+            <section id="user-movies" class="container">
+                <h2>MY MOVIES</h2>
 
-            <section id="features" class="blue">
+                <section id="features" class="blue">
+
+                </section>
+
+
 
             </section>
+            <section id="user-dashboard" class="container">
 
+                <section id="user-info"></section>
 
+                <div class="search">
+                    <h2>Movie Search</h2>
+                    <div id="fetch">
+                        <input type="text" placeholder="Search movies here" id="term" />
+                        <button id="search">Search</button>
+                    </div>
+                    <!-- <hr> -->
+                    <!-- testing -->
+                    <div id="movie-detail-popup">
+                        <div id="movie-detail-poster">
 
-        </section>
-        <section id="user-dashboard" class="container">
+                            <img id="poster_path" src="http://via.placeholder.com/400x600" />
+                        </div>
+                        <div id="movie-detail-info">
+                            <h2 id="title"></h2>
+                            <button id="close-detail">&#x2716;</button>
 
-            <section id="user-info"></section>
+                            <br>
+                            <p id="release_date"></p>
+                            <br>
+                            <p id="description"></p>
 
-            <div class="search">
-                <h2>Movie Search</h2>
-                <div id="fetch">
-                    <input type="text" placeholder="Search movies here" id="term" />
-                    <button id="search">Search</button>
+                        </div>
+                        <div id="stupid-button">
+
+                            <button id="add" type="submit">Add to your collection</button>
+                        </div>
+                    </div>
+
+                    <!-- testing -->
+                    <div id="poster" class="poster-div"></div>
+                    <div id="search-error"></div>
                 </div>
-                <!-- <hr> -->
-                <!-- testing -->
-                <div id="movie-detail-popup">
-                    <div id="movie-detail-poster">
-
-                        <img id="poster_path" src="http://via.placeholder.com/400x600" />
-                    </div>
-                    <div id="movie-detail-info">
-                        <h2 id="title"></h2>
-                        <button id="close-detail">&#x2716;</button>
-
-                        <br>
-                        <p id="release_date"></p>
-                        <br>
-                        <p id="description"></p>
-
-                    </div>
-                    <div id="stupid-button">
-
-                        <button id="add" type="submit">Add to your collection</button>
-                    </div>
                 </div>
 
-                <!-- testing -->
-                <div id="poster" class="poster-div"></div>
-                <div id="search-error"></div>
-            </div>
-            </div>
 
-
-        </section>
+            </section>
 
         </section>
         <section id="about-us" class="container">
@@ -291,6 +288,7 @@
 
 
         </section>
+
 
 
 
