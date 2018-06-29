@@ -12,20 +12,14 @@ userView.initUserDashboard = function(ctx) {
     $('.container').hide();
     $('#dashboard-button').show();
     $('#user-dashboard').show();
+    $('#user-movies').hide();
 
-    // console.log(ctx.params);
-    // app.Users.fetchOne(ctx);
+    $('#get-list-button').on('click', function(){
+        // page(`/your-movies/${userId}`);
+        $('#user-movies').show();
+    })
     
 };
-
-userView.initMovieView = function () {
-    console.log('initMovieView route UP');
-    $('#get-list-button').on('click', function(){
-        $('#user-movies').show();
-        
-    })
-};
-
 
 module.userView = userView;
 

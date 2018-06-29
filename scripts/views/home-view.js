@@ -18,7 +18,7 @@ var app = app || {};
         $('#home-button').on('click', function(){
             $('#welcome-message').show();
         });
-        
+
         $('#go-back').on('click', function(){
             $('#login-form').hide();
             $('#welcome-message').show();
@@ -32,8 +32,8 @@ var app = app || {};
                 e.preventDefault();
                 let formData = {};
                 formData.username = $('#username').val(),
-                    formData.password = $('#password').val(),
-                    formData.email = $('#email').val()
+                formData.password = $('#password').val(),
+                formData.email = $('#email').val()
                 let user = new app.Users(formData);
 
                 console.log(user);

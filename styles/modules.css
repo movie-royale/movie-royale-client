@@ -4,11 +4,17 @@
     outline: none;
 }
 
+#get-list-button {
+    margin-top: 1em;
+
+}
+
 #fetch {
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: var(--steel-nav);
-    max-width: 30vw;
+    max-width: 40vw;
 }
 
 #term {
