@@ -27,8 +27,8 @@ var app = app || {};
         $('#welcome-button').on('click', function () {
             $('#login-form').show();
             $('#welcome-message').hide();
-        }); 
-            
+        });
+
         // routes to user dashboard on form submit
 
         $('#login-form').on('submit', function (e) {
@@ -82,4 +82,5 @@ var app = app || {};
 
     module.homeView = homeView;
 
-})(app);
+
+}) (app);
