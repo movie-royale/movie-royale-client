@@ -106,6 +106,14 @@ footer #contact-us {
     body {
         min-width: 80vw;
     }
+
+    #home {
+        background-image: url('../src/theater-bg-2.jpg');
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: cover; 
+    }
+
     #menu-icon {
         display: none;
     }

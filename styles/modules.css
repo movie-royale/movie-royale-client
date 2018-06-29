@@ -29,6 +29,7 @@
 }
 
 #search {
+    display: grid;
     height: 3rem;
     font-family: 'Roboto Slab', serif;
 }
@@ -414,5 +415,10 @@ button:hover {
     #stupid-button {
         grid-area: button;
         margin: 0px auto;
+    }
+    #fetch {
+        /* display: grid; */
+        width: 50vw;
+        margin:0px auto;
     }
 }
