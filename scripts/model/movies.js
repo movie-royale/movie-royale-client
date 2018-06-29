@@ -81,7 +81,8 @@ var app = app || {};
             title: this.title,
             release_date: this.release_date,
             description: this.description,
-            poster_path: this.poster_path
+            poster_path: this.poster_path,
+            users_id: app.Users.data.users_id
         })
             .then(console.log('it works!'))
             .then(results => {

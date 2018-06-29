@@ -18,6 +18,13 @@ userView.initUserDashboard = function(ctx) {
     
 };
 
+userView.initMovieView = function () {
+    console.log('initMovieView route UP');
+    // $('#').on('click', function(){
+    //     // Do stuff
+    // })
+};
+
 userView.setUserData = function() {}
 
 module.userView = userView;
