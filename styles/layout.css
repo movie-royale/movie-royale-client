@@ -53,7 +53,7 @@ nav li:active {
 body {
     width: 100%;
     margin: 0px auto;
-    background-color: var(--denim);
+    /* background-color: var(--denim); */
 }
 
 /* footer  */
@@ -121,10 +121,12 @@ footer #contact-us {
         font-size: 1em;
         margin-right: 1em;
     }
-    nav li:active {
+    nav li:hover {
         background-color: var(--marigold-button);
+        transition: 400ms;
     }
-    nav li:active {
-        background-color: var(--marigold-button);
+    #home {
+        background-image: url('../src/theater-bg-2.jpg');
+        background-repeat: no-repeat;  
     }
 }
