@@ -121,11 +121,9 @@ footer #contact-us {
         font-size: 1em;
         margin-right: 1em;
     }
-    nav li:active {
+    nav li:hover {
         background-color: var(--marigold-button);
-    }
-    nav li:active {
-        background-color: var(--marigold-button);
+        transition: 400ms;
     }
     #home {
         background-image: url('../src/theater-bg-2.jpg');

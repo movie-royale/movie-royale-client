@@ -93,7 +93,6 @@
 
 #main-login {
     text-align: center;
-    outline: 2px solid white;
     background-color: var(--steel-nav);
     position: absolute;
     top: 50%;
@@ -119,8 +118,8 @@
 }
 
 .login-form button {
+    margin-top: 2em;
     padding: 1em;
-    /* background-color: var(--screen-panel); */
     font-size: .75em;
 }
 

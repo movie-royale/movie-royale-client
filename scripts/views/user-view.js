@@ -20,12 +20,12 @@ userView.initUserDashboard = function(ctx) {
 
 userView.initMovieView = function () {
     console.log('initMovieView route UP');
-    // $('#').on('click', function(){
-    //     // Do stuff
-    // })
+    $('#get-list-button').on('click', function(){
+        $('#user-movies').show();
+        
+    })
 };
 
-userView.setUserData = function() {}
 
 module.userView = userView;
 
