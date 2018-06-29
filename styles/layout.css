@@ -42,9 +42,9 @@ nav li:active {
     color: var(--marigold-button);
 }
 
-/* .shrink {
-    height: 10vh;
-} */
+.activeHighline {
+    background-color: var(--marigold-button);
+}
 
 .container {
     min-height: 80vh;
@@ -62,7 +62,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: white;
-    height: 12vh;
+    min-height: 12vh;
     background-color: var(--steel-nav);
     box-shadow: 10px -5px 10px #443;
 }
