@@ -10,33 +10,19 @@ var app = app || {};
 
     // initialize standard login
     homeView.initLoginView = function () {
-        app.Users.fetchAll();
 
         $('.container').hide();
         $('#dashboard-button').hide();
         $('#home').show();
-        $('#login-form').hide();
 
-        $('#home-button').on('click', function(){
-            $('#welcome-message').show();
-        });
-
-        $('#go-back').on('click', function(){
-            $('#login-form').hide();
-            $('#welcome-message').show();
-        });
-
-        $('#welcome-button').on('click', function(){
+        app.Users.fetchAll();
         // routes to user dashboard on form submit
-            $('#welcome-message').hide();
-            $('#login-form').show();
-            $('#login-form').on('submit', function (e) {
-                e.preventDefault();
-                let formData = {};
-                formData.username = $('#username').val(),
+        $('#login-form').on('submit', function (e) {
+            e.preventDefault();
+            let formData = {};
+            formData.username = $('#username').val(),
                 formData.password = $('#password').val(),
                 formData.email = $('#email').val()
-
             let user = new app.Users(formData);
 
             console.log(user);
@@ -58,12 +44,19 @@ var app = app || {};
                         break;
                     }
                     else {
+                        
+
+
+
                         var userId = user.postOne();
                         console.log(userId, ' is the new users ID');
                         break;
+
+
                     }
                 };
             }
+
         })
     };
 

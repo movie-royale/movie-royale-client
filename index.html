@@ -54,7 +54,7 @@
                 <div id="menu-icon" class="fa fa-bars fa-2x"></div>
 
                 <ul>
-                    <li><a id="home-button" class="scroll" href="/">HOME</a></li>
+                    <li><a class="scroll" href="/">HOME</a></li>
                     <li id="dashboard-button"><a class="scroll" href="/dashboard">USER DASHBOARD</a></li>
                     <li><a class="scroll" href="/leaderboards">LEADERBOARDS</a></li>
                     <li><a class="scroll" href="/about-us">ABOUT US</a></li>
@@ -66,16 +66,13 @@
     <main>
         <section id="home" class="container">
             <div id="main-login">
-                <div id="welcome-message">               
-                    <h1>Welcome to Movie Royale</h1>
-                    <p>Filler text talking about what the app does - Lorem Ipsum yadda yadda..</p>
-                    <button id="welcome-button">LOGIN</button>
-                </div>
+                <h1>Welcome to Movie Royale</h1>
+                <h2>Login</h2>
 
                 <form class="login-form" id="login-form" action="#" method="post">
-                        <legend>Login</legend>
+
                         <div class="form-group">
-                            <label for="username">Username</label>
+                            <label for="username">Login ID</label>
                             <br>
                             <input id="username" type="text" required>
                         </div>
@@ -93,14 +90,13 @@
                         </div>
                         
                         <div class="form-group">
-                            <button id="go-back">GO BACK</button>
                             <button id="login" type="submit" value="login">LOGIN</button>
                         </div>
                     </form>
             </div>
         </section>
-        <section id="user-movies" class="container">
-            <h2>MY MOVIES</h2>
+        <section id="leaderboards" class="container">
+            <h2>LEADERBOARDS</h2>
 
             <section id="features" class="blue">
 
@@ -130,17 +126,14 @@
 
         </section>
         <section id="user-dashboard" class="container">
-            
-            
+            <section id="user-info"></section>
+
             <div class="search">
                 <h2>Movie Search</h2>
-
                 <div id="fetch">
                     <input type="text" placeholder="Search movies here" id="term" />
                     <button id="search">Search</button>
                 </div>
-
-                <button id="get-list-button">Click here to see your list.</button>
                 <!-- <hr> -->
                 <!-- testing -->
                 <div id="movie-detail-popup">
@@ -170,8 +163,9 @@
                 <div id="search-error"></div>
             </div>
             </div>
-        </section>
 
+
+        </section>
 
         </section>
         <section id="about-us" class="container">

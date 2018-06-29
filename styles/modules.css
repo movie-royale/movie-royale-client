@@ -4,17 +4,11 @@
     outline: none;
 }
 
-#get-list-button {
-    margin-top: 1em;
-
-}
-
 #fetch {
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: var(--steel-nav);
-    max-width: 40vw;
+    max-width: 30vw;
 }
 
 #term {
@@ -85,20 +79,9 @@
     transform: scale(1.5);
 }
 
-#welcome-message {
-    padding: 1em;
-}
-
-#welcome-message p {
-    margin-top: 1.5em;
-}
-
-#welcome-message button {
-    margin-top: 1.5em;
-}
-
 #main-login {
     text-align: center;
+    outline: 2px solid white;
     background-color: var(--steel-nav);
     position: absolute;
     top: 50%;
@@ -124,8 +107,8 @@
 }
 
 .login-form button {
-    margin-top: 2em;
     padding: 1em;
+    /* background-color: var(--screen-panel); */
     font-size: .75em;
 }
 

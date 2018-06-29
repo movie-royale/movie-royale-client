@@ -17,7 +17,7 @@ WHITE - For bulk of text
      --marine: #57BC90;
  }
 
- h1, legend {
+ h1 {
     font-family: 'Roboto Slab', serif;
  }
 
@@ -27,9 +27,7 @@ WHITE - For bulk of text
  }
 
  #home {
-     background-image: url('../src/movie-theater.png');
-     background-repeat: no-repeat;
-     width: 100%;
+     background-color: var(--denim);
  }
 
  #user-dashboard {
@@ -54,12 +52,6 @@ WHITE - For bulk of text
 
  a {
      text-decoration: none;
- }
-
- legend {
-     font-size: 2em;
-     margin-bottom: 1em;
-     color: var(--marigold-button);
  }
 
  main {
