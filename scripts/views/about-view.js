@@ -8,8 +8,8 @@ let aboutView = {};
 
 aboutView.initAboutView = function() {
 
-    $('.container').hide(200);
-    $('#about-us').show(200);
+    $('.container').hide();
+    $('#about-us').show();
 
 };
 
