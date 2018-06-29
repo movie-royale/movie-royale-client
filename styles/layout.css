@@ -29,7 +29,7 @@ nav ul {
     padding: .5em;
 }
 
-nav ul {
+nav:hover ul {
     display: block;
 }
 
@@ -46,7 +46,7 @@ nav li:active {
     background-color: var(--marigold-button);
 }
 
-.active {
+.activeHighline {
     background-color: var(--marigold-button);
 }
 
@@ -66,7 +66,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: white;
-    height: 12vh;
+    min-height: 12vh;
     background-color: var(--steel-nav);
     box-shadow: 10px -5px 10px #443;
 }

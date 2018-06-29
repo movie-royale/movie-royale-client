@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Roboto+Slab" rel="stylesheet">
     <link rel="shortcut icon" href="./src/mr-logo.png">
@@ -36,9 +37,22 @@
             </div>
         </div>
 
-
     </script>
 
+    <script id="profile-template" type="text/x-handlebars-template">
+        <div id="profile-detail-popup">
+                <div id="profile-detail-poster">
+                    <img id="profile-path" src="http://via.placeholder.com/400x600" />
+                </div>
+                <div id="profile-detail-info">
+                    <h2 id="name">{{name}}</h2>
+                    <button id="close-profile">&#x2716;</button>
+                    <br>
+                    <p id="description">{{{body}}}</p>
+                </div>
+            </div>
+
+        </script>
     <title>Movie Royale</title>
 
 
@@ -52,7 +66,6 @@
             <div id="rm-logo"></div>
             <nav>
                 <div id="menu-icon" class="fa fa-bars fa-2x"></div>
-
                 <ul id="nav-active">
                     <li>
                         <a class="scroll" href="/">HOME</a>
@@ -108,36 +121,15 @@
 
             <section id="features" class="blue">
 
-                <!-- <div id="movie-detail-popup">
-                    <div id="movie-detail-poster">
-
-                        <img id="poster-path" src="http://via.placeholder.com/400x600" />
-                    </div>
-                    <div id="movie-detail-info">
-                        <h2 id="title"></h2>
-
-                        <br>
-                        <p id="release-date"></p>
-                        <br>
-                        <p id="description"></p>
-                    </div>
-                    <div id="stupid-button">
-
-                        <button id="add" type="submit">Add to your collection</button>
-
-                    </div>
-                </div> -->
-
             </section>
 
-            </div>
+
 
         </section>
         <section id="user-dashboard" class="container">
             <section id="user-info"></section>
 
             <div class="search">
-                <h2>Movie Search</h2>
                 <div id="fetch">
                     <input type="text" placeholder="Search movies here" id="term" />
                     <button id="search">Search</button>
@@ -161,7 +153,6 @@
                     <div id="stupid-button">
 
                         <button id="add" type="submit">Add to your collection</button>
-                        <!-- <button id="close-detail">&#x2716;</button> -->
                     </div>
                 </div>
 
@@ -177,98 +168,114 @@
         </section>
         <section id="about-us" class="container">
             <h2>ABOUT US</h2>
-            <hr>
+
             <div class="team-info">
-                <h3>Amanda</h3>
-                <img class="profile-img">
+                <img id="amanda" class="profile-img">
+                <h2>Amanda</h2>
+                <p>From Lake Stevens, WA. Lover of all things Disney. I have ADD and Sensory Integration. Ballerina since fall
+                    1993, and been \"en pointe\" since 1995. Attended EvCC majored in accounting, education, and finally,
+                    CIS. Been working contract IT jobs since summer 2012</p>
+
                 <div class="team-info-movies">
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="one" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="two" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="three" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="four" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="five" class="fav-movies">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="team-info">
+                <img id="brandon" class="profile-img">
+                <h2>Brandon</h2>
+                <p>I'm a Seattle native, Marine Corps Veteran, and Alpinist that loves summit beers, sci-fi, and music. I dream
+                    of living in a van and waking up in a new city every week.</p>
+                <div class="team-info-movies">
+
+                    <div>
+                        <img id="six" class="fav-movies">
+                    </div>
+                    <div>
+                        <img id="seven" class="fav-movies">
+                    </div>
+                    <div>
+                        <img id="eight" class="fav-movies">
+                    </div>
+                    <div>
+                        <img id="nine" class="fav-movies">
+                    </div>
+                    <div>
+                        <img id="ten" class="fav-movies">
                     </div>
 
                 </div>
 
             </div>
-            <div class="team-info ">
-                <h3>Brandon</h3>
-                <img class="profile-img ">
-                <div class="team-info-movies ">
+            <div class="team-info">
+                <h2>Chi</h2>
+                <img id="chi" class="profile-img">
+                <p>An avid gamer wants to pursue a career in the tech field , mainly focus in front-end development. Outside
+                    coding and gaming he becomes more interested in archery, looking for a newbie friendly compound bow.</p>
+                <div class="team-info-movies">
+
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="eleven" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="twelve" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="thirteen" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="fourteen" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="fifteen" class="fav-movies">
                     </div>
 
                 </div>
 
             </div>
-            <div class="team-info ">
-                <h3>Chi</h3>
-                <img class="profile-img ">
-                <div class="team-info-movies ">
+            <div class="team-info">
+                <h2>Paul</h2>
+                <img id="paul" class="profile-img">
+                <p>My name is Paul Suarez and I'm a Sales Manager for AT&amp;T. I spent a few years working on my Computer Science
+                    degree and unfortunately had to put that on hold due to some life events. I decided to join Code Fellows
+                    because I wanted to merge my passion for sales with my passion for technology and Code Fellows can help
+                    me achieve this goal in a fraction of the time</p>
+                <div class="team-info-movies">
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="sixteen" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="seventeen" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="eighteen" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="nineteen" class="fav-movies">
                     </div>
                     <div>
-                        <img class="fav-movies" rc="" alt="">
+                        <img id="twenty" class="fav-movies">
                     </div>
 
                 </div>
-
             </div>
-            <div class="team-info ">
-                <h3>Paul</h3>
-                <img class="profile-img ">
-                <div class="team-info-movies ">
-                    <div>
-                        <img class="fav-movies" rc="" alt="">
-                    </div>
-                    <div>
-                        <img class="fav-movies" rc="" alt="">
-                    </div>
-                    <div>
-                        <img class="fav-movies" rc="" alt="">
-                    </div>
-                    <div>
-                        <img class="fav-movies" rc="" alt="">
-                    </div>
-                    <div>
-                        <img class="fav-movies" rc="" alt="">
-                    </div>
-                </div>
 
-            </div>
+
         </section>
 
 
@@ -302,8 +309,9 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js "></script>
     <script type="text/javascript " src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js "></script>
     <!-- INTERNAL SCRIPTS -->
-    <script src="scripts/controller/index.js "></script>
     <script src="scripts/views/slick.js "></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="scripts/controller/index.js "></script>
     <script src="scripts/model/users.js "></script>
     <script src="scripts/model/movies.js "></script>
     <script src="scripts/views/home-view.js "></script>
