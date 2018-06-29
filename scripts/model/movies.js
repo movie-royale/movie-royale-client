@@ -39,25 +39,21 @@ var app = app || {};
         Movies.all = rows.map((movie) => new Movies(movie));
     };
 
-    Movies.fetchAll = callback => {
+    Movies.fetchAll = () => {
         $.get(`${app.ENV.apiURL}/api/v1/movies`)
             .then(results => {
                 Movies.loadAll(results);
-                callback();
+                // callback();
             })
     };
 
-    Movies.fetchOne = (id, callback) => {
-        $.ajax({
-            url: `${app.ENV.apiURL}/api/v1/movies/${id}`,
-            method: 'GET',
-            data: {
-                movies_id: 1, // need to pass a variable in here to select specific movies id
-            }
-        })
+    Movies.fetchOne = (ctx) => {
+        $.get(`${app.ENV.apiURL}/api/v1/users/${ctx.params.user_number}`)
+
+
+
             .then(results => {
-                movies.loadAll(results);
-                callback();
+                Movies.loadOne(results);
             })
     };
 
