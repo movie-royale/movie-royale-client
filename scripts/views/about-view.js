@@ -2,17 +2,17 @@
 
 var app = app || {};
 
-(function(module) {
+(function (module) {
 
-let aboutView = {};
+    let aboutView = {};
 
-aboutView.initAboutView = function() {
+    aboutView.initAboutView = function () {
 
-    $('.container').hide();
-    $('#about-us').show();
+        $('.container').hide();
+        $('#about-us').show();
 
-};
+    };
 
-module.aboutView = aboutView;
+    module.aboutView = aboutView;
 
 })(app);

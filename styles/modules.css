@@ -4,17 +4,21 @@
     outline: none;
 }
 
-#get-list-button {
-    margin-top: 1em;
-
+.slider {
+    display: none;
 }
 
+.slider.slick-initialized {
+    display: block;
+}
+
+/* slick setting */
+
 #fetch {
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: var(--steel-nav);
-    max-width: 40vw;
+    max-width: 30vw;
 }
 
 #term {
@@ -58,32 +62,155 @@
 
 /* for about us page  */
 
+#amanda {
+    background-image: url("../src/amanda.jpg");
+}
+
+#brandon {
+    background-image: url("../src/summitshot.jpg");
+}
+
+#chi {
+    background-image: url("../src/chi.png");
+}
+
+#paul {
+    background-image: url("../src/paul.png");
+}
+
+.team-info {
+    display: grid;
+    grid-template-areas: "img h2 h2 h2 " "img p p p" "info info info info";
+    grid-gap: 1em;
+}
+
 .profile-img {
-    background-image: url("http://via.placeholder.com/100x100");
+    grid-area: img;
+    justify-self: end;
+    /* background-image: url("http://via.placeholder.com/100x100"); */
     width: 100px;
     height: 100px;
-    border: 3px solid black;
-}
-
-.movie-poster {
-    background-image: url("http://via.placeholder.com/125x200");
-    /* background-image: url("https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_SY1000_CR0,0,674,1000_AL_.jpg"); */
     background-size: cover;
-    min-width: 125px;
-    height: 200px;
-    transition-duration: 500ms;
+    border-radius: 20%;
+    border: solid 2px var(--marigold-button);
+    box-shadow: 5px 5px 3px #442;
 }
 
-.team-info-movies ul {
+.team-info h2 {
+    grid-area: h2;
+    background-color: var(--marigold-button);
+    width: 60vw;
+}
+
+.team-info p {
+    grid-area: p;
+    max-width: 900px;
+    width: 60vw;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.fav-movies {
+    min-width: 200px;
+    height: 300px;
+    background-size: cover;
+}
+
+.team-info-movies {
+    grid-area: info;
+    margin: auto;
+    max-width: 60vw;
+}
+
+.team-info-movies {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
-    text-align: center;
+    grid-template-columns: repeat(5, 1fr);
 }
 
-.movie-poster:hover {
-    transform: rotate(0);
-    transform: scale(1.5);
+#one {
+    background-image: url("http://image.tmdb.org/t/p/w200//xNWs9LM46vJWwf1q0VGPOccTKg4.jpg");
 }
+
+#two {
+    background-image: url("http://image.tmdb.org/t/p/w200//xq1Ugd62d23K2knRUx6xxuALTZB.jpg");
+}
+
+#three {
+    background-image: url("http://image.tmdb.org/t/p/w200//b9QJr2oblOu1grgOMUZF1xkUJdh.jpg");
+}
+
+#four {
+    background-image: url("http://image.tmdb.org/t/p/w200//gpxjoE0yvRwIhFEJgNArtKtaN7S.jpg");
+}
+
+#five {
+    background-image: url("http://image.tmdb.org/t/p/w200//on9JlbGEccLsYkjeEph2Whm1DIp.jpg  ");
+}
+
+
+#six {
+    background-image: url("http://image.tmdb.org/t/p/w200//nORMXEkYEbzkU5WkMWMgRDJwjSZ.jpg");
+}
+
+#seven {
+    background-image: url("http://image.tmdb.org/t/p/w200//5ig0kdWz5kxR4PHjyCgyI5khCzd.jpg");
+}
+
+#eight {
+    background-image: url("http://image.tmdb.org/t/p/w200//tpoVEYvm6qcXueZrQYJNRLXL88s.jpg");
+}
+
+#nine {
+    background-image: url("http://image.tmdb.org/t/p/w200//9SKDSFbaM6LuGqG1aPWN3wYGEyD.jpg");
+}
+
+#ten {
+    background-image: url("http://image.tmdb.org/t/p/w200//c414cDeQ9b6qLPLeKmiJuLDUREJ.jpg");
+}
+
+#eleven {
+    background-image: url("http://image.tmdb.org/t/p/w200//wss1PkvHD2cYH6lu5mSa2MgGoi.jpg");
+}
+
+#twelve {
+    background-image: url("http://image.tmdb.org/t/p/w200//yE5d3BUhE8hCnkMUJOo1QDoOGNz.jpg");
+}
+
+#thirteen {
+    background-image: url(" http://image.tmdb.org/t/p/w200//lIv1QinFqz4dlp5U4lQ6HaiskOZ.jpg");
+}
+
+#fourteen {
+    background-image: url("http://image.tmdb.org/t/p/w200//tkt9xR1kNX5R9rCebASKck44si2.jpg");
+}
+
+#fifteen {
+    background-image: url("http://image.tmdb.org/t/p/w200//gGBu0hKw9BGddG8RkRAMX7B6NDB.jpg");
+}
+
+#sixteen {
+    background-image: url("http://image.tmdb.org/t/p/w200//hEpWvX6Bp79eLxY1kX5ZZJcme5U.jpg");
+}
+
+#seventeen {
+    background-image: url("http://image.tmdb.org/t/p/w200//EelZzudHRvJmjWccWscN1S5vmI.jpg");
+}
+
+
+#eighteen {
+    background-image: url("http://image.tmdb.org/t/p/w200//6WBIzCgmDCYrqh64yDREGeDk9d3.jpg");
+}
+
+#nineteen {
+    background-image: url("http://image.tmdb.org/t/p/w200//tgXOraQmKatqrVs2KMgnNn6QpO.jpg");
+}
+
+#twenty {
+    background-image: url("http://image.tmdb.org/t/p/w200//w6LisixORl4NbEl4BaEykdkVloE.jpg");
+}
+
+/* for about us page end here */
+
 
 #welcome-message {
     padding: 1em;
@@ -99,6 +226,7 @@
 
 #main-login {
     text-align: center;
+    outline: 2px solid white;
     background-color: var(--steel-nav);
     position: absolute;
     top: 50%;
@@ -124,8 +252,8 @@
 }
 
 .login-form button {
-    margin-top: 2em;
     padding: 1em;
+    /* background-color: var(--screen-panel); */
     font-size: .75em;
 }
 
@@ -271,4 +399,3 @@ button:hover {
         margin: 0px auto;
     }
 }
-/*  */
