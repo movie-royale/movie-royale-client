@@ -14,6 +14,11 @@ var app = app || {};
         $('#dashboard-button').hide();
         $('#home').show();
         $('#login-form').hide();
+
+        $('#home-button').on('click', function(){
+            $('#welcome-message').show();
+        });
+        
         $('#go-back').on('click', function(){
             $('#login-form').hide();
             $('#welcome-message').show();

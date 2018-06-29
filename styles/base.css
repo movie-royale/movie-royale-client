@@ -17,7 +17,7 @@ WHITE - For bulk of text
      --marine: #57BC90;
  }
 
- h1 {
+ h1, legend {
     font-family: 'Roboto Slab', serif;
  }
 
@@ -52,6 +52,12 @@ WHITE - For bulk of text
 
  a {
      text-decoration: none;
+ }
+
+ legend {
+     font-size: 2em;
+     margin-bottom: 1em;
+     color: var(--marigold-button);
  }
 
  main {
