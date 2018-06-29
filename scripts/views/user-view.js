@@ -12,14 +12,13 @@ userView.initUserDashboard = function(ctx) {
     $('.container').hide();
     $('#dashboard-button').show();
     $('#user-dashboard').show();
-    $('#user-movies').hide();
 
-    $('#get-list-button').on('click', function(){
-        // page(`/your-movies/${userId}`);
-        $('#user-movies').show();
-    })
+    // console.log(ctx.params);
+    // app.Users.fetchOne(ctx);
     
 };
+
+userView.setUserData = function() {}
 
 module.userView = userView;
 
