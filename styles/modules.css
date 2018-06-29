@@ -19,6 +19,7 @@
     grid-template-columns: 2fr 1fr;
     background-color: var(--steel-nav);
     max-width: 30vw;
+    margin: auto;
 }
 
 #term {
@@ -28,8 +29,14 @@
 }
 
 #search {
+    display: grid;
     height: 3rem;
     font-family: 'Roboto Slab', serif;
+}
+
+.search h2 {
+    margin: 0px auto;
+    text-align: center;
 }
 
 .movie-preview {
@@ -147,7 +154,6 @@
     background-image: url("http://image.tmdb.org/t/p/w200//on9JlbGEccLsYkjeEph2Whm1DIp.jpg  ");
 }
 
-
 #six {
     background-image: url("http://image.tmdb.org/t/p/w200//nORMXEkYEbzkU5WkMWMgRDJwjSZ.jpg");
 }
@@ -196,7 +202,6 @@
     background-image: url("http://image.tmdb.org/t/p/w200//EelZzudHRvJmjWccWscN1S5vmI.jpg");
 }
 
-
 #eighteen {
     background-image: url("http://image.tmdb.org/t/p/w200//6WBIzCgmDCYrqh64yDREGeDk9d3.jpg");
 }
@@ -210,7 +215,6 @@
 }
 
 /* for about us page end here */
-
 
 #welcome-message {
     padding: 1em;
@@ -256,7 +260,6 @@
     /* background-color: var(--screen-panel); */
     font-size: .75em;
 }
-
 
 /* for popup movie detail */
 
@@ -323,6 +326,22 @@ button:hover {
     right: 0;
 }
 
+/* user-popup */
+
+#user-popup {
+    position: absolute;
+    display: grid;
+    grid-template-areas: "poster info" "poster button";
+    width: 70vw;
+    height: 70vh;
+    margin: -10px 5% auto;
+    padding: 1em;
+    opacity: 1;
+    background-color: var( --steel-nav);
+    box-shadow: 10px 10px 10px #443;
+    z-index: 6;
+}
+
 /* //testing */
 
 .testing p {
@@ -333,7 +352,6 @@ button:hover {
 }
 
 /* media query */
-
 
 @media only screen and (max-width: 800px) {
     .movie-preview img {
@@ -379,7 +397,7 @@ button:hover {
         display: grid;
         grid-template-areas: "poster" "info" "button";
         width: 90vw;
-        top:10vh;
+        top: 10vh;
     }
     #movie-detail-poster {
         grid-area: poster;
@@ -397,5 +415,10 @@ button:hover {
     #stupid-button {
         grid-area: button;
         margin: 0px auto;
+    }
+    #fetch {
+        /* display: grid; */
+        width: 50vw;
+        margin:0px auto;
     }
 }

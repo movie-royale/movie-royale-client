@@ -10,7 +10,7 @@ var app = app || {};
     homeView.initLoginView = function () {
         app.Users.fetchAll();
 
-        $('.container').hide();
+        // $('.container').hide();
         $('#dashboard-button').hide();
         $('#home').show();
         $('#login-form').hide();
