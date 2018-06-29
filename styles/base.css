@@ -30,6 +30,7 @@ WHITE - For bulk of text
      background-image: url('../src/movie-theater.png');
      background-repeat: no-repeat;
      width: 100%;
+     background-size: cover; 
  }
 
  #user-dashboard {
