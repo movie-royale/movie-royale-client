@@ -76,18 +76,15 @@ var app = app || {};
     };
 
     // Post new movie
-    Movies.prototype.postOne = function (callback) {
+    Movies.prototype.postOne = function () {
         $.post(`${app.ENV.apiURL}/api/v1/movies`, {
             title: this.title,
             release_date: this.release_date,
             description: this.description,
             poster_path: this.poster_path
         })
-            .then(console.log('it works!'))
-            .then(results => {
-                Movies.loadOne(results);
-                callback();
-            })
+            .then(console.log(this.title, this.release_date, this.description, this.poster_path, 'RIGGGGHHHHTTTT HHHEEERRRRRREERERERERER bitch'))
+
     };
 
     module.Movies = Movies;
