@@ -142,5 +142,17 @@ $('#poster').on('click', 'img', function () {
 $('#close-detail').on('click',function(){
     $('#movie-detail-popup').hide(200);
 })
-//hide pop up detail
+    //hide pop up detail
 $('#movie-detail-popup').hide();
+$('#user-popup').hide();
+
+
+//user pop up
+$('#close-user-popup').on('click',function(){
+    $('#user-popup').hide(200);
+})
+
+$('#get-list-button').on('click',function(){
+    $('#user-popup').show(200);
+
+})
