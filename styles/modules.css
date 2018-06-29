@@ -79,6 +79,18 @@
     transform: scale(1.5);
 }
 
+#welcome-message {
+    padding: 1em;
+}
+
+#welcome-message p {
+    margin-top: 1.5em;
+}
+
+#welcome-message button {
+    margin-top: 1.5em;
+}
+
 #main-login {
     text-align: center;
     outline: 2px solid white;
