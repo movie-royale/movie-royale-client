@@ -14,17 +14,17 @@ var app = app || {};
         return template(this);
     };
 
-    $('#login').on('click', handlForm);
-    function handlForm(event) {
-        event.preventDefault();
-        let formData = {};
-        formData.username = $('#username').val(),
-        formData.password = $('#password').val(),
-        formData.email = $('#email').val()
-        let user = new Users(formData);
-        console.log(user);
-        user.postOne();
-    };
+    // $('#login').on('click', handlForm);
+    // function handlForm(event) {
+    //     event.preventDefault();
+    //     let formData = {};
+    //     formData.username = $('#username').val(),
+    //     formData.password = $('#password').val(),
+    //     formData.email = $('#email').val()
+    //     let user = new Users(formData);
+    //     console.log(user);
+    //     user.postOne();
+    // };
 
     // Load instances
     Users.all = [];
@@ -32,6 +32,8 @@ var app = app || {};
 
     // AJAX fetch and load
     Users.loadAll = results => {
+        console.log(results, ' results in loadAll');
+
         Users.all = results.map((user) => new Users(user));
     };
 
@@ -44,18 +46,14 @@ var app = app || {};
         $.get(`${app.ENV.apiURL}/api/v1/users`)
             .then(results => {
                 Users.loadAll(results);
-                // callback();
             })
     };
 
     Users.fetchOne = (ctx) => {
-        $.ajax({
-            url: `${app.ENV.apiURL}/api/v1/users/${ctx.params.users_id}`,
-            method: 'GET',
-            data: {
-                users_id: ctx.params.users_id
-            }
-        })
+        $.get(`${app.ENV.apiURL}/api/v1/users/${ctx.params.users_id}`)
+
+
+
             .then(results => {
                 Users.loadOne(results);
             })
@@ -83,24 +81,22 @@ var app = app || {};
             })
     };
 
-    Users.prototype.postOne = function (callback) {
+    Users.prototype.postOne = function () {
         $.post(`${app.ENV.apiURL}/api/v1/users`, {
             username: this.username,
             password: this.password,
             email: this.email
         })
-            .then(console.log('it works!'))
-            .then(results => {
-                Users.loadAll(results);
-                // FIX THIS SHIT
-                callback();
-            })
-    };
+            .then(data => {
+                console.log(data.users_id);
+                page(`/dashboard/${data.users_id}`);
+    })
+};
 
 
 
 
 
-    module.Users = Users;
+module.Users = Users;
 
-})(app);
+}) (app);
