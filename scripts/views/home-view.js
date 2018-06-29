@@ -15,25 +15,25 @@ var app = app || {};
         $('#home').show();
         $('#login-form').hide();
 
-        $('#home-button').on('click', function () {
+        $('#home-button').on('click', function(){
             $('#welcome-message').show();
         });
 
-        $('#go-back').on('click', function () {
+        $('#go-back').on('click', function(){
             $('#login-form').hide();
             $('#welcome-message').show();
         });
 
-        $('#welcome-button').on('click', function () {
-            // routes to user dashboard on form submit
+        $('#welcome-button').on('click', function(){
+        // routes to user dashboard on form submit
             $('#welcome-message').hide();
             $('#login-form').show();
             $('#login-form').on('submit', function (e) {
                 e.preventDefault();
                 let formData = {};
                 formData.username = $('#username').val(),
-                    formData.password = $('#password').val(),
-                    formData.email = $('#email').val()
+                formData.password = $('#password').val(),
+                formData.email = $('#email').val()
                 let user = new app.Users(formData);
 
                 console.log(user);

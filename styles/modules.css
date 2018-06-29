@@ -15,11 +15,10 @@
 /* slick setting */
 
 #fetch {
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: var(--steel-nav);
-    max-width: 40vw;
+    max-width: 30vw;
 }
 
 #term {
@@ -148,6 +147,7 @@
     background-image: url("http://image.tmdb.org/t/p/w200//on9JlbGEccLsYkjeEph2Whm1DIp.jpg  ");
 }
 
+
 #six {
     background-image: url("http://image.tmdb.org/t/p/w200//nORMXEkYEbzkU5WkMWMgRDJwjSZ.jpg");
 }
@@ -224,9 +224,9 @@
     margin-top: 1.5em;
 }
 
-
 #main-login {
     text-align: center;
+    outline: 2px solid white;
     background-color: var(--steel-nav);
     position: absolute;
     top: 50%;
@@ -252,8 +252,8 @@
 }
 
 .login-form button {
-    margin-top: 2em;
     padding: 1em;
+    /* background-color: var(--screen-panel); */
     font-size: .75em;
 }
 
