@@ -17,9 +17,6 @@ const api_key = "1d51b32090673b3394923b86194480f3";
 // Search TMDB for movies and render results to page
 function getPoster(e) {
     // e.preventDefault();
-    $('#poster').empty();
-    $('#search-error').empty();
-
     $('#movie-detail-popup').hide(100);
     var film = $('#term').val();
     if (film == '') {
@@ -27,7 +24,7 @@ function getPoster(e) {
         $('#poster').html('<div class="alert">I can\'t search for an empty field, sucka!</div>');
 
     } else {
-        // $('#poster').empty();
+        $('#poster').empty();
         $.getJSON(`https://api.themoviedb.org/3/search/multi?api_key=${api_key}&query=${film}&callback=?`, function (json) {
             if (json.results.length !== 0) {
                 console.log(json);
@@ -131,9 +128,9 @@ $('#poster').on('click', 'img', function () {
 
             console.log(title, ' was clicked WOOOOOOT');
             $('#title').empty().append(title)
-            $('#release-date').empty().append(`Release date: ${date}`)
+            $('#release_date').empty().append(`Release date: ${date}`)
             $('#description').empty().append(app.mostRecentResults.results[i].overview)
-            $('#poster-path').empty().attr("src", `http://image.tmdb.org/t/p/w500/${app.mostRecentResults.results[i].poster_path}`)
+            $('#poster_path').empty().attr("src", `http://image.tmdb.org/t/p/w500/${app.mostRecentResults.results[i].poster_path}`)
 
         }
     }

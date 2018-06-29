@@ -38,12 +38,8 @@ nav li {
     padding: 1em;
 }
 
-nav li:hover {
-    background-color: var(--marigold-button);
-}
-
 nav li:active {
-    background-color: var(--marigold-button);
+    color: var(--marigold-button);
 }
 
 .activeHighline {
@@ -57,7 +53,7 @@ nav li:active {
 body {
     width: 100%;
     margin: 0px auto;
-    background-color: var(--denim);
+    /* background-color: var(--denim); */
 }
 
 /* footer  */
@@ -72,10 +68,6 @@ footer {
 }
 
 footer #tmdb-logo {
-    background-image: url("https://www.themoviedb.org/static_cache/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png");
-    width: 8rem;
-    height: 3rem;
-    background-size: cover;
     margin: auto;
 }
 
@@ -105,7 +97,7 @@ footer #contact-us {
 
 #gh-logo:hover, #cf-logo:hover {
     transition-duration: 200ms;
-    transform: scale(1.2);
+    transform:scale(1.2);
 }
 
 /* //////media query for hamburger menu////// */
@@ -129,10 +121,12 @@ footer #contact-us {
         font-size: 1em;
         margin-right: 1em;
     }
-    nav li:active {
+    nav li:hover {
         background-color: var(--marigold-button);
+        transition: 400ms;
     }
-    nav li:active {
-        background-color: var(--marigold-button);
+    #home {
+        background-image: url('../src/theater-bg-2.jpg');
+        background-repeat: no-repeat;  
     }
 }

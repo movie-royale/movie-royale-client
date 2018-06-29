@@ -11,14 +11,15 @@ userView.initUserDashboard = function(ctx) {
     $('#term').val('');
     $('.container').hide();
     $('#dashboard-button').show();
-    $('#user-dashboard').show(200);
+    $('#user-dashboard').show();
+    $('#user-movies').hide();
 
-    // console.log(ctx.params);
-    // app.Users.fetchOne(ctx);
+    $('#get-list-button').on('click', function(){
+        // page(`/your-movies/${userId}`);
+        $('#user-movies').show();
+    })
     
 };
-
-userView.setUserData = function() {}
 
 module.userView = userView;
 

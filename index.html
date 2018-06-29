@@ -67,7 +67,7 @@
             <nav>
                 <div id="menu-icon" class="fa fa-bars fa-2x"></div>
                 <ul id="nav-active">
-                    <li>
+                    <li id="home-button">
                         <a class="scroll" href="/">HOME</a>
                     </li>
                     <li id="dashboard-button">
@@ -87,37 +87,41 @@
     <main>
         <section id="home" class="container">
             <div id="main-login">
-                <h1>Welcome to Movie Royale</h1>
-                <h2>Login</h2>
+                <div id="welcome-message">
+                    <h1>Welcome to Movie Royale</h1>
+                    <p>Filler text talking about what the app does - Lorem Ipsum yadda yadda..</p>
+                    <button id="welcome-button">LOGIN</button>
+                </div>
 
-                <form class="login-form" action="#" method="post">
-
+                <form class="login-form" id="login-form" action="#" method="post">
+                    <legend>Login</legend>
                     <div class="form-group">
-                        <label for="username">Login ID</label>
+                        <label for="username">Username</label>
                         <br>
-                        <input id="username" type="text" name="username" required>
+                        <input id="username" type="text" required>
                     </div>
 
                     <div class="form-group">
                         <label for="password">Password</label>
                         <br>
-                        <input id="password" type="password" name="password" required>
+                        <input id="password" type="password" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email</label>
                         <br>
-                        <input id="email" type="email" name="email" required>
+                        <input id="email" type="email" required>
                     </div>
 
                     <div class="form-group">
+                        <button id="go-back">GO BACK</button>
                         <button id="login" type="submit" value="login">LOGIN</button>
                     </div>
                 </form>
             </div>
         </section>
-        <section id="leaderboards" class="container">
-            <h2>LEADERBOARDS</h2>
+        <section id="user-movies" class="container">
+            <h2>MY MOVIES</h2>
 
             <section id="features" class="blue">
 
@@ -127,28 +131,33 @@
 
         </section>
         <section id="user-dashboard" class="container">
-            <section id="user-info"></section>
+
 
             <div class="search">
+                <h2>Movie Search</h2>
+
                 <div id="fetch">
                     <input type="text" placeholder="Search movies here" id="term" />
                     <button id="search">Search</button>
                 </div>
+
+                <button id="get-list-button">Click here to see your list.</button>
                 <!-- <hr> -->
                 <!-- testing -->
                 <div id="movie-detail-popup">
                     <div id="movie-detail-poster">
 
-                        <img id="poster-path" src="http://via.placeholder.com/400x600" />
+                        <img id="poster_path" src="http://via.placeholder.com/400x600" />
                     </div>
                     <div id="movie-detail-info">
                         <h2 id="title"></h2>
                         <button id="close-detail">&#x2716;</button>
 
                         <br>
-                        <p id="release-date"></p>
+                        <p id="release_date"></p>
                         <br>
                         <p id="description"></p>
+
                     </div>
                     <div id="stupid-button">
 
@@ -161,9 +170,8 @@
                 <div id="search-error"></div>
             </div>
             </div>
-
-
         </section>
+
 
         </section>
         <section id="about-us" class="container">
@@ -304,10 +312,10 @@
     </footer>
 
     <!-- CDN LINKS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js "></script>
-    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js "></script>
-    <script type="text/javascript " src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- INTERNAL SCRIPTS -->
     <script src="scripts/views/slick.js "></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

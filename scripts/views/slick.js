@@ -2,7 +2,6 @@
 
 
 
-
 // dynamic slick template
 
 function showSlider() {

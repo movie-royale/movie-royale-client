@@ -15,8 +15,8 @@ WHITE - For bulk of text
      --marine: #57BC90;
  }
 
- h1 {
-     font-family: 'Roboto Slab', serif;
+ h1, legend {
+    font-family: 'Roboto Slab', serif;
  }
 
  h2, h3, label, p, a {
@@ -25,7 +25,10 @@ WHITE - For bulk of text
  }
 
  #home {
-     background-color: var(--denim);
+     background-image: url('../src/movie-theater.png');
+     background-repeat: no-repeat;
+     width: 100%;
+     background-size: cover;
  }
 
  #user-dashboard {
@@ -52,6 +55,12 @@ WHITE - For bulk of text
      text-decoration: none;
  }
 
+ legend {
+     font-size: 2em;
+     margin-bottom: 1em;
+     color: var(--marigold-button);
+ }
+
  main {
      color: white;
  }
@@ -64,5 +73,9 @@ WHITE - For bulk of text
      padding: .3em 0em .3em .5em;
  }
 
-
- 
+ #tmdb-logo {
+     background-image: url("https://www.themoviedb.org/static_cache/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png");
+     width: 13vw;
+     height: 5vw;
+     background-size: cover;
+ }

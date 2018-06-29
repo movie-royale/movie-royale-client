@@ -19,10 +19,11 @@ var app = app || {};
     function handlForm(event) {
         event.preventDefault();
         let formData = {};
-        formData.title = $('#title').val(),
-            formData.release_date = $('#release_date').val(),
-            formData.description = $('#description').val(),
-            formData.poster_path = $('#poster_path').val()
+        formData.title = $('#title').text(),
+            formData.release_date = $('#release_date').text(),
+            formData.description = $('#description').text(),
+            formData.poster_path = $('#poster_path').attr('src'),
+            formData.user_number = window.location.href
         
         let movie = new Movies(formData);
         console.log(movie);
@@ -76,18 +77,16 @@ var app = app || {};
     };
 
     // Post new movie
-    Movies.prototype.postOne = function (callback) {
+    Movies.prototype.postOne = function () {
         $.post(`${app.ENV.apiURL}/api/v1/movies`, {
             title: this.title,
             release_date: this.release_date,
             description: this.description,
-            poster_path: this.poster_path
+            poster_path: this.poster_path,
+            user_number: this.user_number
         })
-            .then(console.log('it works!'))
-            .then(results => {
-                Movies.loadOne(results);
-                callback();
-            })
+            .then(console.log(this.title, this.release_date, this.description, this.poster_path, this.user_number, 'RIGGGGHHHHTTTT HHHEEERRRRRREERERERERER bitch'))
+
     };
 
     module.Movies = Movies;
