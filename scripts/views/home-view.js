@@ -26,6 +26,54 @@ var app = app || {};
 
         $('#welcome-button').on('click', function(){
         // routes to user dashboard on form submit
+
+        $('#login-form').on('submit', function (e) {
+            e.preventDefault();
+            console.log('YOU CLICK THE LOGIN BUTTON');
+            let formData = {};
+            formData.username = $('#username').val(),
+                formData.password = $('#password').val(),
+                formData.email = $('#email').val()
+            let user = new app.Users(formData);
+
+            console.log(user);
+            // console.log(app.Users.all.length);
+            if (!app.Users.all.length) {
+                user.postOne();
+            } else {
+
+                for (let i = 0; i < app.Users.all.length; i++) {
+                    app.Users.fetchAll();
+                    console.log(app.Users.all.length);
+                    // console.log($('#username').val(), ' $(#username).val()');
+                    // console.log(app.Users.all[i].username, ' app.Users.all[i].username');
+                    if ($('#username').val() === app.Users.all[i].username) {
+                        console.log('userId  inside THE IFFFFFF')
+                        // app.Users.fetchAll();
+
+                        var userId = app.Users.all[i].users_id;
+
+                        console.log(userId);
+                        page(`/dashboard/${userId}`);
+                        // break;
+                    }
+                    else {
+                        
+
+
+                        var userId = app.Users.all[i].users_id;
+                        user.postOne();
+                        app.Users.fetchAll();
+                        console.log(app.Users.all.length, ' is the all users length');
+                        console.log(userId, ' is the new users ID');
+                        // break;
+
+
+                    }
+                };
+            }
+
+
             $('#welcome-message').hide();
             $('#login-form').show();
             $('#login-form').on('submit', function (e) {
@@ -61,6 +109,7 @@ var app = app || {};
                 }
 
             })
+
         })
     };
 
