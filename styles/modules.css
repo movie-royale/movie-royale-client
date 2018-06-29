@@ -14,7 +14,7 @@
 }
 
 #term {
-    color: var(--marigold-button);
+    /* color: var(--marigold-button); */
     font-weight: bold;
     font-family: 'Roboto Slab', serif;
 }

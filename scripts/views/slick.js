@@ -66,15 +66,18 @@ function fkSlider() {
 // });
 
 
-function showteam() {
+function showTeam() {
     $('.team-info-movies').slick({
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 100,
-
-    })
+        autoplay: true,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        autoplaySpeed: 2000,
+    });
 }
-showteam();
+showTeam();
+
+
 
 
 //new toy
