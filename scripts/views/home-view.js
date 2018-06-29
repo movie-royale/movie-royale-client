@@ -4,6 +4,8 @@ var app = app || {};
 
 (function (module) {
 
+    var user_number_id;
+
     var homeView = {};
 
     // initialize standard login
@@ -36,6 +38,8 @@ var app = app || {};
                         console.log('userId inside THE IFFFFFF')
                         // app.Users.fetchAll();
                         var userId = app.Users.all[i].users_id;
+                        user_number_id = userId;
+                        console.log(user_number_id, ' LOOK LOK LOOK')
                         page(`/dashboard/${userId}`);
                         break;
                     }

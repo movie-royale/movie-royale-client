@@ -22,7 +22,8 @@ var app = app || {};
         formData.title = $('#title').text(),
             formData.release_date = $('#release_date').text(),
             formData.description = $('#description').text(),
-            formData.poster_path = $('#poster_path').attr('src')
+            formData.poster_path = $('#poster_path').attr('src'),
+            formData.user_number = window.location.href
         
         let movie = new Movies(formData);
         console.log(movie);
@@ -81,9 +82,10 @@ var app = app || {};
             title: this.title,
             release_date: this.release_date,
             description: this.description,
-            poster_path: this.poster_path
+            poster_path: this.poster_path,
+            user_number: this.user_number
         })
-            .then(console.log(this.title, this.release_date, this.description, this.poster_path, 'RIGGGGHHHHTTTT HHHEEERRRRRREERERERERER bitch'))
+            .then(console.log(this.title, this.release_date, this.description, this.poster_path, this.user_number, 'RIGGGGHHHHTTTT HHHEEERRRRRREERERERERER bitch'))
 
     };
 
