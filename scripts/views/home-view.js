@@ -4,8 +4,6 @@ var app = app || {};
 
 (function (module) {
 
-    var user_number_id;
-
     var homeView = {};
 
     // initialize standard login
@@ -19,6 +17,7 @@ var app = app || {};
         // routes to user dashboard on form submit
         $('#login-form').on('submit', function (e) {
             e.preventDefault();
+            console.log('YOU CLICK THE LOGIN BUTTON');
             let formData = {};
             formData.username = $('#username').val(),
                 formData.password = $('#password').val(),
@@ -32,25 +31,30 @@ var app = app || {};
             } else {
 
                 for (let i = 0; i < app.Users.all.length; i++) {
+                    app.Users.fetchAll();
+                    console.log(app.Users.all.length);
                     // console.log($('#username').val(), ' $(#username).val()');
                     // console.log(app.Users.all[i].username, ' app.Users.all[i].username');
                     if ($('#username').val() === app.Users.all[i].username) {
-                        console.log('userId inside THE IFFFFFF')
+                        console.log('userId  inside THE IFFFFFF')
                         // app.Users.fetchAll();
+
                         var userId = app.Users.all[i].users_id;
-                        user_number_id = userId;
-                        console.log(user_number_id, ' LOOK LOK LOOK')
+
+                        console.log(userId);
                         page(`/dashboard/${userId}`);
-                        break;
+                        // break;
                     }
                     else {
                         
 
 
-
-                        var userId = user.postOne();
+                        var userId = app.Users.all[i].users_id;
+                        user.postOne();
+                        app.Users.fetchAll();
+                        console.log(app.Users.all.length, ' is the all users length');
                         console.log(userId, ' is the new users ID');
-                        break;
+                        // break;
 
 
                     }
