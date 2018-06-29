@@ -19,10 +19,10 @@ var app = app || {};
     function handlForm(event) {
         event.preventDefault();
         let formData = {};
-        formData.title = $('#title').val(),
-            formData.release_date = $('#release_date').val(),
-            formData.description = $('#description').val(),
-            formData.poster_path = $('#poster_path').val()
+        formData.title = $('#title').text(),
+            formData.release_date = $('#release-date').text(),
+            formData.description = $('#description').text(),
+            formData.poster_path = $('#poster-path').attr('src')
         
         let movie = new Movies(formData);
         console.log(movie);
