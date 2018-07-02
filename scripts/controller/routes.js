@@ -8,7 +8,7 @@ page('/movie-royale-client', () => app.homeView.initLoginView());
 page('/dashboard/:users_id', (ctx) => app.userView.initUserDashboard(ctx));
 page('/dashboard', () => app.userView.initUserDashboard());
 // Initializes leaderboards
-page('/leaderboards', () => app.leaderboardView.initLeaderboardView());
+// page('/leaderboards', () => app.leaderboardView.initLeaderboardView());
 // Initializes about us page
 page('/about-us', () => app.aboutView.initAboutView());
 

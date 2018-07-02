@@ -95,18 +95,21 @@
                     <div class="form-group">
                         <label for="username">Username</label>
                         <br>
+
                         <input id="username" type="text" required>
                     </div>
 
                     <div class="form-group">
                         <label for="password">Password</label>
                         <br>
+
                         <input id="password" type="password" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email</label>
                         <br>
+
                         <input id="email" type="email" required>
                     </div>
 
@@ -116,82 +119,73 @@
                 </form>
             </div>
         </section>
-        <section id="leaderboards" class="container">
+        <!-- <section id="leaderboards" class="container">
             <h2>LEADERBOARDS</h2>
 
             <section id="features" class="blue">
 
+ -->
+
+
+        <!-- ADD PERSONAL MOVIES HERE -->
+
+
+
+
+
+
 
 
         <section id="user-dashboard" class="container">
-            
-            <section id="user-movies" class="container">
-                <!-- ADD PERSONAL MOVIES HERE -->
 
-              
+            <section id="user-info"></section>
 
-            </section>
-            <section id="user-movies" class="container">
-                <h2>MY MOVIES</h2>
-
-                <section id="features" class="blue">
-
-                </section>
-
-
-
-            </section>
-            <section id="user-dashboard" class="container">
-
-                <section id="user-info"></section>
-
-                <div class="search">
-                    <h2>Movie Search</h2>
-                    <div id="fetch">
-                        <input type="text" placeholder="Search movies here" id="term" />
-                        <button id="search">Search</button>
-                    </div>
-                    <button id="get-list-button">Your list.</button>
-                    <!-- <button id="get-list-button"> list.</button> -->
-                    <!-- user-popup -->
-                    <div id="user-popup">
-                        <h2>Title</h2>
-                        <button id="close-user-popup">&#x2716;</button>
-                        <img id="user-poster" src="http://via.placeholder.com/400x600">
-                    </div>
-
-
-                    <!-- <hr> -->
-                    <!-- testing -->
-                    <div id="movie-detail-popup">
-                        <div id="movie-detail-poster">
-
-                            <img id="poster_path" src="http://via.placeholder.com/400x600" />
-                        </div>
-                        <div id="movie-detail-info">
-                            <h2 id="title"></h2>
-                            <button id="close-detail">&#x2716;</button>
-
-                            <br>
-                            <p id="release_date"></p>
-                            <br>
-                            <p id="description"></p>
-
-                        </div>
-                        <div id="stupid-button">
-
-                            <button id="add" type="submit">Add to your collection</button>
-                        </div>
-                    </div>
-
-                    <!-- testing -->
-                    <div id="poster" class="poster-div"></div>
-                    <div id="search-error"></div>
+            <div class="search">
+                <h2>Movie Search</h2>
+                <div id="fetch">
+                    <input type="text" placeholder="Search movies here" id="term" />
+                    <button id="search">Search</button>
                 </div>
+                <button id="get-list-button">Your list.</button>
+                <!-- user-popup -->
+                <div id="user-popup">
+                    <img id="user-poster" src="http://via.placeholder.com/400x600">
+                    <h2>Title</h2>
+                    <button id="close-user-popup">&#x2716;</button>
                 </div>
 
 
-            </section>
+                <!-- <hr> -->
+                <!-- testing -->
+                <div id="movie-detail-popup">
+                    <div id="movie-detail-poster">
+
+                        <img id="poster_path" src="http://via.placeholder.com/400x600" />
+                    </div>
+                    <div id="movie-detail-info">
+                        <h2 id="title"></h2>
+                        <button id="close-detail">&#x2716;</button>
+
+                        <br>
+                        <p id="release_date"></p>
+                        <br>
+                        <p id="description"></p>
+
+                    </div>
+                    <div id="stupid-button">
+
+                        <button id="add" type="submit">Add to your collection</button>
+                    </div>
+                </div>
+
+                <!-- testing -->
+                <div id="poster" class="poster-div"></div>
+                <div id="search-error"></div>
+            </div>
+            </div>
+
+
+
 
         </section>
         <section id="about-us" class="container">
@@ -338,9 +332,8 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- INTERNAL SCRIPTS -->
-    <script src="scripts/views/slick.js "></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="scripts/controller/index.js "></script>
+    <script src="scripts/views/slick.js "></script>
     <script src="scripts/model/users.js "></script>
     <script src="scripts/model/movies.js "></script>
     <script src="scripts/views/home-view.js "></script>
@@ -350,8 +343,6 @@
     <script src="scripts/views/testing.js "></script>
     <script src="scripts/model/api.js "></script>
     <script src="scripts/controller/routes.js "></script>
-
-
 </body>
 
 </html>
