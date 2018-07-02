@@ -11,6 +11,7 @@ var app = app || {};
 
         $('.container').hide();
         $('#about-us').show();
+        showTeam();
 
     };
 
