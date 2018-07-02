@@ -341,6 +341,11 @@ button:hover {
     box-shadow: 10px 10px 10px #443;
     z-index: 6;
 }
+#close-user-popup{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 /* //testing */
 

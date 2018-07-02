@@ -8,6 +8,7 @@ var app = app || {};
 
     aboutView.initAboutView = function () {
 
+
         $('.container').hide();
         $('#about-us').show();
 
